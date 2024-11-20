@@ -11,7 +11,8 @@ export default {
       colors: {
         greenLogo: "#28d3a0",
         purpleLogo: "#4814b0",
-        background: "#00060f"
+        background: "#00060f",
+        customPurple: "#4F46E5",
       },
     },
   },
