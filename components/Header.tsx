@@ -19,7 +19,7 @@ export default function Header() {
                         height={110}
                     />
                 </Link>
-                <ul>
+                <ul className='hidden md:block'>
                     <li className='px-6 py-[6px] bg-background rounded-2xl cursor-pointer'>
                         <Link href="/">Roadmap</Link>
                     </li>
@@ -27,7 +27,7 @@ export default function Header() {
             </div>
 
             <div className='w-fit h-full flex items-center'>
-                <CustomButton className="bg-greenLogo">Sign in</CustomButton>
+                <CustomButton>Sign in</CustomButton>
             </div>
         </nav>
     </header>
