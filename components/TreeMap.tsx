@@ -1,4 +1,8 @@
 'use client';
+import React from "react";
+import Tree from "react-d3-tree";
+import { useCenteredTree } from "../utils/TreeMapHelpers";
+
 // This is a simplified example of an org chart with a depth of 2.
 // Note how deeper levels are defined recursively via the `children` property.
 const orgChart = {
@@ -37,24 +41,17 @@ const orgChart = {
   ],
 };
 
-import React from "react";
-import Tree from "react-d3-tree";
-import { useCenteredTree } from "../utils/helpers";
-
 const containerStyles = {
   width: "100vw",
   height: "100vh"
 };
 
+
 // Here we're using `renderCustomNodeElement` render a component that uses
 // both SVG and HTML tags side-by-side.
 // This is made possible by `foreignObject`, which wraps the HTML tags to
 // allow for them to be injected into the SVG namespace.
-const renderForeignObjectNode = ({
-  nodeDatum,
-  toggleNode,
-  foreignObjectProps
-}) => (
+const renderForeignObjectNode = ({ nodeDatum, toggleNode, foreignObjectProps }) => (
   <g>
     <circle r={15}></circle>
     {/* `foreignObject` requires width & height to be explicitly set. */}
@@ -84,7 +81,7 @@ const renderForeignObjectNode = ({
   </g>
 );
 
-export default function App() {
+export default function TreeMap() {
     const [translate, containerRef] = useCenteredTree() as [{ x: number; y: number; }, (containerElem: { getBoundingClientRect: () => { width: number; height: number; }; } | null) => void];
   const { x, y } = translate;
 
