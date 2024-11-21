@@ -27,7 +27,7 @@ export default function Header() {
             </div>
 
             <div className='w-fit h-full flex items-center'>
-                <CustomButton>Sign in</CustomButton>
+                <CustomButton bgColor={'var(--customPurpleBtn)'}>Sign in</CustomButton>
             </div>
         </nav>
     </header>
