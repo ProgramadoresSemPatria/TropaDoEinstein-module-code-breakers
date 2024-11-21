@@ -1,5 +1,7 @@
+import dynamic from "next/dynamic";
 import Header from "@/components/Header";
-import TreeMap from "@/components/TreeMap";
+
+const TreeMap = dynamic(() => import("../components/TreeMap"), { ssr: false });
 
 export default function Home() {
 

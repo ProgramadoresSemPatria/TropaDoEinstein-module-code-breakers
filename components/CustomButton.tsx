@@ -7,9 +7,9 @@ const CustomButton = ({ children, className, ...props }: {  children: React.Reac
             variant="contained"
             className={className}
             sx={{ 
-                backgroundColor: 'var(--customPurple)', 
+                backgroundColor: 'var(--customPurpleBtn)', 
                 '&:hover': { 
-                    backgroundColor: 'var(--customPurple)', 
+                    backgroundColor: 'var(--customPurpleBtn)', 
                 } 
             }}
             {...props}

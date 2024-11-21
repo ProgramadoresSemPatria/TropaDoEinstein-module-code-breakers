@@ -8,7 +8,7 @@ import CustomButton from './CustomButton';
 
 export default function Header() {
   return (
-    <header className="w-full h-16 bg-[#18063a] px-5 sm:px-10 border-b-[1px] border-purpleLogo text-white">
+    <header className="w-full h-16 bg-customPurple px-5 sm:px-10 border-b-[1px] border-purpleLogo text-white">
         <nav className="w-full h-full flex  justify-between">
             <div className="w-fit h-full flex items-center gap-16">
                 <Link href="/">
