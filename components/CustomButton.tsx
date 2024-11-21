@@ -1,11 +1,10 @@
 import React from 'react';
 import { Button } from '@mui/material';
 
-const CustomButton = ({ children, className, ...props }: {  children: React.ReactNode, className: string, }) => {
+const CustomButton = ({ children, ...props }: {  children: React.ReactNode, }) => {
     return (
         <Button
             variant="contained"
-            className={className}
             sx={{ 
                 backgroundColor: 'var(--customPurpleBtn)', 
                 '&:hover': { 
