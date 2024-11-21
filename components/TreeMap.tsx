@@ -41,11 +41,6 @@ const orgChart = {
   ],
 };
 
-const containerStyles = {
-  width: "100vw",
-  height: "100vh"
-};
-
 
 // Here we're using `renderCustomNodeElement` render a component that uses
 // both SVG and HTML tags side-by-side.
@@ -60,7 +55,7 @@ const renderForeignObjectNode = ({ nodeDatum, toggleNode, foreignObjectProps }) 
         style={{
           border: "1px solid transparent",
           borderRadius: "5px",
-          backgroundColor: "#dedede"
+          backgroundColor: "var(--purpleLogo)"
         }}
       >
         <h3 style={{ textAlign: "center" }}>{nodeDatum.name}</h3>
@@ -93,7 +88,7 @@ export default function TreeMap() {
     y: -20
   };
   return (
-    <div style={containerStyles} ref={containerRef}>
+    <div ref={containerRef} className="w-[100vw] h-[100vh] lg:w-[76vw] text-white ">
       <Tree
         data={orgChart}
         translate={{ x, y }}
