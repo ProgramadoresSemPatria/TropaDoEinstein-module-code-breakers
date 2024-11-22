@@ -4,15 +4,16 @@ import SettingsRoundedIcon from "@mui/icons-material/SettingsRounded";
 import QuestionMarkTwoToneIcon from "@mui/icons-material/QuestionMarkTwoTone";
 import ProgressBar from "./ProgressBar";
 import Tooltip from "./Tooltip";
-import { ZoomProvider } from "../contexts/ZoomContext";
 import { useZoomContext } from "../contexts/ZoomContext";
 
 export default function AsideSection() {
   const { setEnableResetzoom } = useZoomContext();
 
   const handleResetZoom = () => {
-    console.log("chamei função")
-    setEnableResetzoom(true); // Reset the zoom to its default value (1)
+    setEnableResetzoom(true); 
+    setTimeout(() => {
+      setEnableResetzoom(false);
+    }, 500);
   };
 
   return (
