@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
+import { ProviderWrapper } from "@/contexts/ProviderWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,12 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} antialiased`}
-      >
-        <AppRouterCacheProvider>
-            {children}
-        </AppRouterCacheProvider>
+      <body className={`${inter.className} antialiased`}>
+        <ProviderWrapper>
+          <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
+        </ProviderWrapper>
       </body>
     </html>
   );
