@@ -1,22 +1,27 @@
 import React from 'react';
-import { Button } from '@mui/material';
+import { Button, ButtonProps } from '@mui/material';
 
-const CustomButton = ({ children, bgColor, ...props }: {  children: React.ReactNode, bgColor: string }) => {
-    return (
-        <Button
-            variant="contained"
-            sx={{ 
-                backgroundColor: bgColor, 
-                '&:hover': { 
-                    backgroundColor: bgColor, 
-                } 
-            }}
-            {...props}
-        >
-            {children}
-        </Button>
-    );
+interface CustomButtonProps extends ButtonProps {
+  bgColor: string;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+}
+
+const CustomButton: React.FC<CustomButtonProps> = ({ children, bgColor, onClick, ...props }) => {
+  return (
+    <Button
+      variant="contained"
+      sx={{ 
+        backgroundColor: bgColor, 
+        '&:hover': { 
+          backgroundColor: bgColor, 
+        } 
+      }}
+      onClick={onClick} 
+      {...props}
+    >
+      {children}
+    </Button>
+  );
 };
-
 
 export default CustomButton;
