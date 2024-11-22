@@ -15,12 +15,12 @@ import StarRoundedIcon from "@mui/icons-material/StarRounded";
 import VideocamRoundedIcon from '@mui/icons-material/VideocamRounded';
 import LaunchRoundedIcon from '@mui/icons-material/LaunchRounded';
 import Link from "next/link";
-import { useProgressBarWidthContext } from "@/contexts/ProgressBarWidthContext";
+import { useNumberOfProblemsTableContext } from "@/contexts/NumberOfProblemsTableContext";
   
   
   const ScrollableTable = () => {
 
-    const { setNumberOfProblemsModalTable } = useProgressBarWidthContext();
+    const { setNumberOfProblemsModalTable } = useNumberOfProblemsTableContext();
 
     const [tableData, setTableData] = useState([
         { id: 1, isStatusChecked: true,  name: "Item 1", isStarChecked: true, problem: 'Problem title', difficulty: 'Easy', solutionLink: 'http:/' },
@@ -46,7 +46,7 @@ import { useProgressBarWidthContext } from "@/contexts/ProgressBarWidthContext";
             }, 0);
             setNumberOfProblemsModalTable({ quantityTableData, totalStatusChecked });
         }
-    }, [tableData])
+    }, [setNumberOfProblemsModalTable, tableData])
 
     const setDifficultyTextColor = (difficulty: string) => { 
         switch (difficulty) { 
