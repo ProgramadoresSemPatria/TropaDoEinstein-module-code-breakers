@@ -4,14 +4,16 @@ import SettingsRoundedIcon from "@mui/icons-material/SettingsRounded";
 import QuestionMarkTwoToneIcon from "@mui/icons-material/QuestionMarkTwoTone";
 import ProgressBar from "./ProgressBar";
 import Tooltip from "./Tooltip";
-import { ZoomProvider } from "../contexts/ZoomContext";
 import { useZoomContext } from "../contexts/ZoomContext";
 
 export default function AsideSection() {
-  const { setZoom } = useZoomContext();
+  const { setEnableResetzoom } = useZoomContext();
 
   const handleResetZoom = () => {
-    setZoom(1); // Reset the zoom to its default value (1)
+    setEnableResetzoom(true); 
+    setTimeout(() => {
+      setEnableResetzoom(false);
+    }, 500);
   };
 
   return (
@@ -36,7 +38,7 @@ export default function AsideSection() {
       <div className="w-full flex justify-between">
         <Tooltip title={"Reset graph position"}>
           <button
-            onClick={() => handleResetZoom}
+            onClick={() => handleResetZoom()}
             className="px-6 py-[6px] rounded-2xl hover:bg-background transition ease-in-out duration-300"
           >
             Reset

@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Tree from "react-d3-tree";
 import { useCenteredTree } from "../utils/TreeMapHelpers";
 import { useZoomContext } from "@/contexts/ZoomContext";
@@ -82,8 +82,8 @@ const renderForeignObjectNode = ({
 );
 
 export default function TreeMap() {
-  const { zoom } = useZoomContext();
 
+  const { enableResetzoom } = useZoomContext();
   const [translate, containerRef] = useCenteredTree() as [
     { x: number; y: number },
     (
@@ -113,7 +113,8 @@ export default function TreeMap() {
         rootNodeClassName="node__root"
         branchNodeClassName="node__branch"
         leafNodeClassName="node__leaf"
-        zoom={zoom}
+        // Spread condicional para passar o zoom apenas se enableZoom for true
+        {...(enableResetzoom && { zoom: 0.8 })}
         pathClassFunc={() => "node__link"}
         renderCustomNodeElement={(rd3tProps) =>
           renderForeignObjectNode({ ...rd3tProps, foreignObjectProps })
