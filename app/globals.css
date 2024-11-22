@@ -35,3 +35,11 @@ html {
   scrollbar-width: auto;
   scrollbar-color: #888 var(--customPurple);
 }
+
+
+/* links node tree */
+.custom-node-link{
+    stroke: var(--greenLogo) !important; 
+    stroke-width: 5px !important; 
+    fill: none !important;
+}
