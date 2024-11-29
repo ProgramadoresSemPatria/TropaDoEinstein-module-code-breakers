@@ -6,6 +6,8 @@ interface TreemapContextType {
   setEnableResetzoom: (value: boolean) => void;
   enableDragging: boolean;
   setEnableDragging: (value: boolean) => void;
+  enableZoom: boolean;
+  setEnableZoom: (value: boolean) => void;
 }
 
 const TreemapContext = createContext<TreemapContextType | undefined>(undefined);
@@ -13,6 +15,7 @@ const TreemapContext = createContext<TreemapContextType | undefined>(undefined);
 export const TreemapProvider = ({ children }: { children: ReactNode }) => {
   const [enableResetzoom, setEnableResetzoom] = useState<boolean>(false);
   const [enableDragging, setEnableDragging] = useState<boolean>(true);
+  const [enableZoom, setEnableZoom] = useState<boolean>(true);
 
   return (
     <TreemapContext.Provider
@@ -21,6 +24,8 @@ export const TreemapProvider = ({ children }: { children: ReactNode }) => {
         setEnableResetzoom,
         enableDragging,
         setEnableDragging,
+        enableZoom,
+        setEnableZoom,
       }}
     >
       {children}

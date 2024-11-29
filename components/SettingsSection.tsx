@@ -2,11 +2,14 @@
 import React, { useState } from "react";
 import { Modal, Box, Button, Switch, Typography } from "@mui/material";
 import { useSettingsContext } from "@/contexts/SettingsContext";
+import { useTreemapContext } from "@/contexts/TreemapContext";
 
 export default function SettingsSection() {
   const [panning, setPanning] = useState(true);
   const [zooming, setZooming] = useState(true);
   const { isSettingsOpen, setIsSettingsOpen } = useSettingsContext();
+  const { enableDragging, setEnableDragging } = useTreemapContext();
+  const { enableZoom, setEnableZoom } = useTreemapContext();
 
   return (
     <Modal
@@ -27,8 +30,8 @@ export default function SettingsSection() {
           <div className="flex justify-between items-center">
             <Typography>Enable Dragging</Typography>
             <Switch
-              checked={dragging}
-              onChange={(e) => setDragging(e.target.checked)}
+              checked={enableDragging}
+              onChange={(e) => setEnableDragging(e.target.checked)}
             />
           </div>
           <div className="flex justify-between items-center">
@@ -41,8 +44,8 @@ export default function SettingsSection() {
           <div className="flex justify-between items-center">
             <Typography>Enable Zooming</Typography>
             <Switch
-              checked={zooming}
-              onChange={(e) => setZooming(e.target.checked)}
+              checked={enableZoom}
+              onChange={(e) => setEnableZoom(e.target.checked)}
             />
           </div>
         </div>
