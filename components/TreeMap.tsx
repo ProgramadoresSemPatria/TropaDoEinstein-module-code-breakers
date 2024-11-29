@@ -2,7 +2,7 @@
 import React from "react";
 import Tree from "react-d3-tree";
 import { useCenteredTree } from "../utils/TreeMapHelpers";
-import { useZoomContext } from "@/contexts/ZoomContext";
+import { useTreemapContext } from "@/contexts/TreemapContext";
 import { useIsModalOpenContext } from "@/contexts/IsModalOpenContext";
 
 // This is a simplified example of an org chart with a depth of 2.
@@ -51,17 +51,17 @@ const orgChart = {
 const renderForeignObjectNode = ({
   nodeDatum,
   foreignObjectProps,
-  onClickNode, 
+  onClickNode,
 }) => (
   <g>
     <circle r={5}></circle>
     <foreignObject {...foreignObjectProps}>
       <div
         style={{
-          width: '200px',
-          height: "62px", 
-          padding: "5px", 
-          display: "flex", 
+          width: "200px",
+          height: "62px",
+          padding: "5px",
+          display: "flex",
           alignItems: "center",
           justifyContent: "center",
           border: "1px solid transparent",
@@ -73,11 +73,13 @@ const renderForeignObjectNode = ({
         // Efeito de hover
         onMouseEnter={(e) => {
           e.currentTarget.style.backgroundColor = "var(--customPurpleBtn)";
-          e.currentTarget.style.transition = "background-color 0.5s ease-in-out";
+          e.currentTarget.style.transition =
+            "background-color 0.5s ease-in-out";
         }}
         onMouseLeave={(e) => {
           e.currentTarget.style.backgroundColor = "var(--purpleLogo)";
-          e.currentTarget.style.transition = "background-color 0.5s ease-in-out";
+          e.currentTarget.style.transition =
+            "background-color 0.5s ease-in-out";
         }}
         // Evento de clique
         onClick={() => onClickNode(nodeDatum)}
@@ -88,10 +90,9 @@ const renderForeignObjectNode = ({
   </g>
 );
 
-
 export default function TreeMap() {
-
-  const { enableResetzoom } = useZoomContext();
+  const { enableResetzoom } = useTreemapContext();
+  const { enableDragging } = useTreemapContext();
   const { setIsPrincipalModalSectionOpen } = useIsModalOpenContext();
   const [translate, containerRef] = useCenteredTree() as [
     { x: number; y: number },
@@ -129,6 +130,7 @@ export default function TreeMap() {
         branchNodeClassName="node__branch"
         leafNodeClassName="node__leaf"
         pathClassFunc={() => "custom-node-link"}
+        draggable={enableDragging}
         renderCustomNodeElement={(rd3tProps) =>
           renderForeignObjectNode({
             ...rd3tProps,
