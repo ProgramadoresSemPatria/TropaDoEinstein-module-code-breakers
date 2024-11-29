@@ -93,6 +93,7 @@ const renderForeignObjectNode = ({
 export default function TreeMap() {
   const { enableResetzoom } = useTreemapContext();
   const { enableDragging } = useTreemapContext();
+  const { enableZoom } = useTreemapContext();
   const { setIsPrincipalModalSectionOpen } = useIsModalOpenContext();
   const [translate, containerRef] = useCenteredTree() as [
     { x: number; y: number },
@@ -131,6 +132,7 @@ export default function TreeMap() {
         leafNodeClassName="node__leaf"
         pathClassFunc={() => "custom-node-link"}
         draggable={enableDragging}
+        zoomable={enableZoom}
         renderCustomNodeElement={(rd3tProps) =>
           renderForeignObjectNode({
             ...rd3tProps,

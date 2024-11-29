@@ -9,6 +9,7 @@ export default function SettingsSection() {
   const [zooming, setZooming] = useState(true);
   const { isSettingsOpen, setIsSettingsOpen } = useSettingsContext();
   const { enableDragging, setEnableDragging } = useTreemapContext();
+  const { enableZoom, setEnableZoom } = useTreemapContext();
 
   return (
     <Modal
@@ -43,8 +44,8 @@ export default function SettingsSection() {
           <div className="flex justify-between items-center">
             <Typography>Enable Zooming</Typography>
             <Switch
-              checked={zooming}
-              onChange={(e) => setZooming(e.target.checked)}
+              checked={enableZoom}
+              onChange={(e) => setEnableZoom(e.target.checked)}
             />
           </div>
         </div>
