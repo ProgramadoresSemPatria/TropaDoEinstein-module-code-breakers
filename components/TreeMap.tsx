@@ -1,149 +1,115 @@
-"use client";
-import React from "react";
-import Tree from "react-d3-tree";
-import { useCenteredTree } from "../utils/TreeMapHelpers";
-import { useTreemapContext } from "@/contexts/TreemapContext";
+'use client';
+import React, { useMemo } from 'react';
+import ReactFlow, {
+  Controls,
+  Node,
+  Edge,
+  Handle, 
+  Position
+} from 'reactflow';
+import 'reactflow/dist/style.css';
+import dagre from 'dagre';
+
+import { initialNodes, initialEdges } from '@/utils/graphInfo';
+//import { useTreemapContext } from "@/contexts/TreemapContext";
 import { useIsModalOpenContext } from "@/contexts/IsModalOpenContext";
 
-// This is a simplified example of an org chart with a depth of 2.
-// Note how deeper levels are defined recursively via the `children` property.
-const orgChart = {
-  name: "CEO",
-  children: [
-    {
-      name: "Manager",
-      attributes: {
-        department: "Production",
-      },
-      children: [
-        {
-          name: "Foreman",
-          attributes: {
-            department: "Fabrication",
-          },
-          children: [
-            {
-              name: "Worker",
-            },
-          ],
-        },
-        {
-          name: "Foreman",
-          attributes: {
-            department: "Assembly",
-          },
-          children: [
-            {
-              name: "Worker",
-            },
-          ],
-        },
-      ],
-    },
-  ],
+
+const dagreGraph = new dagre.graphlib.Graph();
+dagreGraph.setDefaultEdgeLabel(() => ({}));
+
+const getLayoutedElements = (nodes: Node[], edges: Edge[]) => {
+  const nodeWidth = 182;
+  const nodeHeight = 80;
+
+  dagreGraph.setGraph({ rankdir: 'TB' });
+
+  nodes.forEach((node) => {
+    dagreGraph.setNode(node.id, { width: nodeWidth, height: nodeHeight });
+  });
+
+  edges.forEach((edge) => {
+    dagreGraph.setEdge(edge.source, edge.target);
+  });
+
+  dagre.layout(dagreGraph);
+
+  nodes.forEach((node) => {
+    const nodeWithPosition = dagreGraph.node(node.id);
+    node.position = {
+      x: nodeWithPosition.x - nodeWidth / 2,
+      y: nodeWithPosition.y - nodeHeight / 2,
+    };
+  });
+
+  return { nodes, edges };
 };
 
-// Here we're using `renderCustomNodeElement` render a component that uses
-// both SVG and HTML tags side-by-side.
-// This is made possible by `foreignObject`, which wraps the HTML tags to
-// allow for them to be injected into the SVG namespace.
 
-const renderForeignObjectNode = ({
-  nodeDatum,
-  foreignObjectProps,
-  onClickNode,
-}) => (
-  <g>
-    <circle r={5}></circle>
-    <foreignObject {...foreignObjectProps}>
-      <div
-        style={{
-          width: "200px",
-          height: "62px",
-          padding: "5px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          border: "1px solid transparent",
-          borderRadius: "5px",
-          backgroundColor: "var(--purpleLogo)",
-          transition: "transform 0.2s, box-shadow 0.2s",
-          cursor: "pointer",
-        }}
-        // Efeito de hover
-        onMouseEnter={(e) => {
-          e.currentTarget.style.backgroundColor = "var(--customPurpleBtn)";
-          e.currentTarget.style.transition =
-            "background-color 0.5s ease-in-out";
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.backgroundColor = "var(--purpleLogo)";
-          e.currentTarget.style.transition =
-            "background-color 0.5s ease-in-out";
-        }}
-        // Evento de clique
-        onClick={() => onClickNode(nodeDatum)}
-      >
-        <h3 style={{ textAlign: "center" }}>{nodeDatum.name}</h3>
-      </div>
-    </foreignObject>
-  </g>
-);
+interface NodeData {
+  label: string;
+}
 
-export default function TreeMap() {
-  const { enableResetzoom } = useTreemapContext();
-  const { enableDragging } = useTreemapContext();
-  const { enableZoom } = useTreemapContext();
+export default function Graph() {
+
+  //const { enableDragging, enableZoom } = useTreemapContext();
   const { setIsPrincipalModalSectionOpen } = useIsModalOpenContext();
-  const [translate, containerRef] = useCenteredTree() as [
-    { x: number; y: number },
-    (
-      containerElem: {
-        getBoundingClientRect: () => { width: number; height: number };
-      } | null
-    ) => void
-  ];
 
-  const { x, y } = translate;
+  const handleNodeClick = (nodeId: string) => {
+    setIsPrincipalModalSectionOpen({ value: true, id: Number(nodeId)});
+  }
 
-  const nodeSize = { x: 200, y: 150 };
-  const foreignObjectProps = {
-    width: nodeSize.x,
-    height: nodeSize.y,
-    x: -100,
-    y: -20,
-  };
+  const { nodes, edges } = useMemo(
+    () => getLayoutedElements(initialNodes, initialEdges),
+    [],
+  );
+  const nodeTypes = useMemo(() => ({
+    custom: ({ data, id }: { data: NodeData, id: string }) => {
+     
+      const hasIncoming = edges.some(edge => edge.target === id);
+      const hasOutgoing = edges.some(edge => edge.source === id);
 
-  const handleNodeClick = (node) => {
-    setIsPrincipalModalSectionOpen(true);
+      return (
+        <div
+          className="p-4 bg-purpleLogo text-white rounded-lg flex flex-col text-center text-sm h-[62px] min-w-[200px] justify-center cursor-pointer transition ease-in-out duration-300 hover:bg-customPurpleBtn"
+          onClick={() => handleNodeClick(id)}
+        >
+          { hasIncoming && (
+              <Handle type="target" position={Position.Top} id="target" />
+          )}
+          { hasOutgoing && (
+              <Handle type="source" position={Position.Bottom} id="source" />
+          )}
+          <strong>{data.label}</strong>
+        </div>
+      );
+    },
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }), [edges]);
+
+  const edgeStyles = {
+    stroke: 'var(--greenLogo)', 
+    strokeWidth: 5,   
+    markerEnd: 'url(#arrow)',
+    smoothness: 1,
+    zIndex: 10,
   };
 
   return (
-    <div
-      ref={containerRef}
-      className="w-[100vw] h-[100vh] lg:w-[76vw] text-white p-5"
-    >
-      <Tree
-        data={orgChart}
-        translate={{ x, y }}
-        nodeSize={nodeSize}
-        rootNodeClassName="node__root"
-        branchNodeClassName="node__branch"
-        leafNodeClassName="node__leaf"
-        pathClassFunc={() => "custom-node-link"}
-        draggable={enableDragging}
-        zoomable={enableZoom}
-        renderCustomNodeElement={(rd3tProps) =>
-          renderForeignObjectNode({
-            ...rd3tProps,
-            foreignObjectProps,
-            onClickNode: handleNodeClick,
-          })
-        }
-        orientation="vertical"
-        // Spread condicional para passar o zoom apenas se enableZoom for true
-        {...(enableResetzoom && { zoom: 0.9999 })}
-      />
+    <div className="w-[100vw] h-[calc(100vh-2.5rem)] lg:w-[76vw] text-white">
+  
+        <ReactFlow
+          nodes={nodes}
+          edges={edges.map(edge => ({
+            ...edge,
+            style: edgeStyles
+          }))}
+          nodeTypes={nodeTypes}
+          fitView
+        >
+          <Controls />
+        </ReactFlow>
     </div>
   );
-}
+  
+};

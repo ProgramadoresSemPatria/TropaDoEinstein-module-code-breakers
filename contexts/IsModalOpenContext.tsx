@@ -2,17 +2,26 @@
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
 interface IsModalOpenContextType {
-  isPrincipalModalSectionOpen: boolean;
-  setIsPrincipalModalSectionOpen: (value: boolean) => void;
+  isPrincipalModalSectionOpen: { value: boolean; id: number }; 
+  setIsPrincipalModalSectionOpen: (value: { value: boolean; id: number }) => void; 
+  principalModalTitle: string;
+  setPrincipalModalTitle: ( value: string ) => void;
 }
 
 const IsModalOpenContext = createContext<IsModalOpenContextType | undefined>(undefined);
 
 export const IsModalOpenContextProvider = ({ children }: { children: ReactNode }) => {
-  const [isPrincipalModalSectionOpen, setIsPrincipalModalSectionOpen] = useState<boolean>(false);
+  const [isPrincipalModalSectionOpen, setIsPrincipalModalSectionOpen] = useState<{ value: boolean; id: number }>({
+    value: false,
+    id: 0,
+  });
+
+  const [principalModalTitle, setPrincipalModalTitle] = useState<string>('');
 
   return (
-    <IsModalOpenContext.Provider value={{ isPrincipalModalSectionOpen, setIsPrincipalModalSectionOpen }}>
+    <IsModalOpenContext.Provider value={{ 
+      isPrincipalModalSectionOpen, setIsPrincipalModalSectionOpen, principalModalTitle, setPrincipalModalTitle
+      }}>
       {children}
     </IsModalOpenContext.Provider>
   );
