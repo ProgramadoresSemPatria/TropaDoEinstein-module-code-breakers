@@ -11,15 +11,15 @@ const ModalSectionTable = dynamic(() => import('./ModalSectionTable'), { ssr: fa
 
 export default function ModalSection() {
     
-    const { isPrincipalModalSectionOpen, setIsPrincipalModalSectionOpen } = useIsModalOpenContext();
+    const { isPrincipalModalSectionOpen, setIsPrincipalModalSectionOpen, principalModalTitle } = useIsModalOpenContext();
 
     return (
-        <section className={`${ isPrincipalModalSectionOpen ? 'block' : 'hidden'} w-full lg:w-[81%] max-w-[1084px] h-full overflow-y-auto bg-customPurple absolute top-0 right-0 z-50 p-3  scroll-bar`}>
+        <section className={`${ isPrincipalModalSectionOpen.value ? 'block' : 'hidden'} w-full lg:w-[81%] max-w-[1084px] h-full overflow-y-auto bg-customPurple absolute top-0 right-0 z-50 p-3  scroll-bar  modal-section`}>
             <div className="w-full flex items-center ">
-                <CustomButton onClick={() => setIsPrincipalModalSectionOpen(false)} bgColor={'#7c058b'}>
+                <CustomButton onClick={() => setIsPrincipalModalSectionOpen({ value: false, id: 0 })} bgColor={'#7c058b'}>
                     ESC
                 </CustomButton>
-                <h1 className='mx-auto lg:text-2xl font-bold pr-14'>Arrays & Hasing</h1>
+                <h1 className='mx-auto lg:text-2xl font-bold pr-14'>{principalModalTitle}</h1>
             </div>        
 
             <div className="w-[70%] max-w-[500px] mt-2 flex flex-col gap-2 mx-auto">

@@ -15,25 +15,51 @@ import StarRoundedIcon from "@mui/icons-material/StarRounded";
 import VideocamRoundedIcon from '@mui/icons-material/VideocamRounded';
 import LaunchRoundedIcon from '@mui/icons-material/LaunchRounded';
 import Link from "next/link";
+
+import { GraphType, ProblemType, TableDataType } from "@/utils/Types/types";
+import problemsData from '@/utils/data/problems-info-table.json';
 import { useNumberOfProblemsTableContext } from "@/contexts/NumberOfProblemsTableContext";
+import { useIsModalOpenContext } from "@/contexts/IsModalOpenContext";
+
+const typedProblemsData: GraphType = problemsData;
   
-  
-  const ScrollableTable = () => {
+const ScrollableTable = () => {
 
     const { setNumberOfProblemsModalTable } = useNumberOfProblemsTableContext();
+    const { isPrincipalModalSectionOpen, setPrincipalModalTitle } = useIsModalOpenContext();
+    const [tableData, setTableData] = useState<TableDataType[]>([]);
 
-    const [tableData, setTableData] = useState([
-        { id: 1, isStatusChecked: true,  name: "Item 1", isStarChecked: true, problem: 'Problem title', difficulty: 'Easy', solutionLink: 'http:/' },
-        { id: 2, isStatusChecked: false, name: "Item 2", isStarChecked: false, problem: 'Problem title', difficulty: 'Easy', solutionLink: 'http:/' },
-        { id: 3, isStatusChecked: true,  name: "Item 3", isStarChecked: false, problem: 'Problem title', difficulty: 'Medium', solutionLink: 'http:/'},
-        { id: 4, isStatusChecked: false, name: "Item 3", isStarChecked: false, problem: 'Problem title', difficulty: 'Easy', solutionLink: 'http:/' },
-        { id: 5, isStatusChecked: true, name: "Item 3", isStarChecked: true, problem: 'Problem title', difficulty: 'Medium', solutionLink: 'http:/'},
-        { id: 6, isStatusChecked: false, name: "Item 3", isStarChecked: false, problem: 'Problem title', difficulty: 'Medium', solutionLink: 'http:/'},
-        { id: 7, isStatusChecked: false, name: "Item 3", isStarChecked: false, problem: 'Problem title', difficulty: 'Medium', solutionLink: 'http:/'},
-        { id: 8, isStatusChecked: false, name: "Item 3", isStarChecked: false, problem: 'Problem title', difficulty: 'Medium', solutionLink: 'http:/'},
-        { id: 9, isStatusChecked: false, name: "Item 3", isStarChecked: false, problem: 'Problem title', difficulty: 'Hard', solutionLink: 'http:/'},
-        { id: 10, isStatusChecked: false, name: "Item 3", isStarChecked: false, problem: 'Problem title', difficulty: 'Hard', solutionLink: 'http:/'},
-    ]);
+    
+    useEffect(() => {
+        const populateTable = () => {
+
+            let problemInfo = null;
+            for(const problem in typedProblemsData){
+                if(typedProblemsData[problem].id === isPrincipalModalSectionOpen.id) {
+                    problemInfo = typedProblemsData[problem];
+                }
+            }
+            //console.log("problemInfo", problemInfo)
+            setPrincipalModalTitle(problemInfo?.title || '')
+
+            setTableData(() => { 
+                return problemInfo?.problems.map((problem: ProblemType) => (
+                    { 
+                        id: problem.id, 
+                        isStatusChecked: false, 
+                        isStarChecked: false, 
+                        name: problem.name, 
+                        difficulty: problem.difficulty,
+                        problemLink: problem.problemLink, 
+                        solutionLink: problem.solutionLink, 
+                    }
+                )) || []; 
+            })
+        }
+        populateTable();
+    
+    },[isPrincipalModalSectionOpen.id]);
+
 
     useEffect(() => {
         if(tableData){
@@ -85,11 +111,11 @@ import { useNumberOfProblemsTableContext } from "@/contexts/NumberOfProblemsTabl
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell sx={{ color: 'white', fontWeight: 'bold', fontSize: '.94rem' }}>Status</TableCell>
-                <TableCell sx={{ color: 'white', fontWeight: 'bold', fontSize: '.94rem' }}>Star</TableCell>
-                <TableCell sx={{ color: 'white', fontWeight: 'bold', fontSize: '.94rem' }}>Problem</TableCell>
-                <TableCell sx={{ color: 'white', fontWeight: 'bold', fontSize: '.94rem' }}>Difficulty</TableCell>
-                <TableCell sx={{ color: 'white', fontWeight: 'bold', fontSize: '.94rem' }}>Solution</TableCell>
+                <TableCell sx={{ color: 'white', fontFamily: 'Helvetica, Arial, sans-serif', fontWeight: 'bold', fontSize: '.94rem' }}>Status</TableCell>
+                <TableCell sx={{ color: 'white', fontFamily: 'Helvetica, Arial, sans-serif', fontWeight: 'bold', fontSize: '.94rem' }}>Star</TableCell>
+                <TableCell sx={{ color: 'white', fontFamily: 'Helvetica, Arial, sans-serif', fontWeight: 'bold', fontSize: '.94rem' }}>Problem</TableCell>
+                <TableCell sx={{ color: 'white', fontFamily: 'Helvetica, Arial, sans-serif', fontWeight: 'bold', fontSize: '.94rem' }}>Difficulty</TableCell>
+                <TableCell sx={{ color: 'white', fontFamily: 'Helvetica, Arial, sans-serif', fontWeight: 'bold', fontSize: '.94rem' }}>Solution</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -98,7 +124,7 @@ import { useNumberOfProblemsTableContext } from "@/contexts/NumberOfProblemsTabl
                     key={row.id} 
                     sx={{
                         height: '25px',
-                        fontFamily: 'Arial, sans-serif',
+                        fontFamily: 'Helvetica, Arial, sans-serif',
                         backgroundColor: setProblemSolvedBgColor(row.isStatusChecked)
                     }}
                     >
@@ -131,8 +157,8 @@ import { useNumberOfProblemsTableContext } from "@/contexts/NumberOfProblemsTabl
                             ) }
                         </div>
                     </TableCell>
-                    <TableCell sx={{ height: '25px', padding: '0px 15px', color: 'white', fontWeight: '600', letterSpacing: '0.05rem', backgroundColor: setProblemSolvedBgColor(row.isStatusChecked) }}>
-                        {row.problem} 
+                    <TableCell sx={{ height: '25px', padding: '0px 15px', color: 'white', fontWeight: '600', fontFamily: 'Helvetica, Arial, sans-serif', backgroundColor: setProblemSolvedBgColor(row.isStatusChecked) }}>
+                        {row.name} 
                         <Link href="/">
                             <LaunchRoundedIcon style={{fontSize: '16px', marginLeft: '8px'}}/>
                         </Link>
@@ -143,7 +169,7 @@ import { useNumberOfProblemsTableContext } from "@/contexts/NumberOfProblemsTabl
                             width: '190px', 
                             padding: '0px 15px', 
                             fontWeight: '600', 
-                            letterSpacing: '0.05rem', 
+                            fontFamily: 'Helvetica, Arial, sans-serif',
                             fontSize: '.85rem',
                             color: setDifficultyTextColor(row.difficulty),
                             backgroundColor: setProblemSolvedBgColor(row.isStatusChecked)
@@ -151,8 +177,8 @@ import { useNumberOfProblemsTableContext } from "@/contexts/NumberOfProblemsTabl
                     >
                         {row.difficulty}
                     </TableCell>
-                    <TableCell sx={{ height: '25px', width: '160px', padding: '0px 37px', color: 'white', fontWeight: '600', letterSpacing: '0.05rem', backgroundColor: setProblemSolvedBgColor(row.isStatusChecked) }}>
-                        <Link href={row.solutionLink}>
+                    <TableCell sx={{ height: '25px', width: '160px', padding: '0px 37px', color: 'white', fontWeight: '600', fontFamily: 'Helvetica, Arial, sans-serif', backgroundColor: setProblemSolvedBgColor(row.isStatusChecked) }}>
+                        <Link href={'/'}>
                             <VideocamRoundedIcon/>
                         </Link>
                     </TableCell>
