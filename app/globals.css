@@ -37,9 +37,6 @@ html {
 }
 
 
-/* links node tree */
-.custom-node-link{
-    stroke: var(--greenLogo) !important; 
-    stroke-width: 5px !important; 
-    fill: none !important;
+.modal-section, .modal-section-table{
+  font-family: Helvetica, Arial, sans-serif !important;
 }
