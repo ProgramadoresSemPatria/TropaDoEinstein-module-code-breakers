@@ -7,7 +7,11 @@
   --purpleLogo: #4814b0;
   --background: #00060f;
   --customPurple: #18063a;
-  --customPurpleBtn: #4F46E5;
+  --customPurpleBtn: #4f46e5;
+}
+body {
+  background-color: #00060f;
+  color: white;
 }
 
 /* Estilos para navegadores baseados em WebKit */
@@ -30,13 +34,13 @@
   background: #555;
 }
 
-  /* Estilos para o Firefox */
+/* Estilos para o Firefox */
 html {
   scrollbar-width: auto;
   scrollbar-color: #888 var(--customPurple);
 }
 
-
-.modal-section, .modal-section-table{
+.modal-section,
+.modal-section-table {
   font-family: Helvetica, Arial, sans-serif !important;
 }
