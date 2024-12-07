@@ -17,6 +17,7 @@ export const IsModalOpenContextProvider = ({ children }: { children: ReactNode }
   });
 
   const [principalModalTitle, setPrincipalModalTitle] = useState<string>('');
+  
 
   return (
     <IsModalOpenContext.Provider value={{ 
