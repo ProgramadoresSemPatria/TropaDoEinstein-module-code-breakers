@@ -1,10 +1,11 @@
+import { UserDataFromDBType } from '@/utils/Types/types';
 import { database } from '../firebaseDBConfig';
 import { child, get, ref, set } from "firebase/database";
 
-export const addUserResolvedProblemsToDB = async (roadmapTitleId: number, resolvedProblems: any) => {
+export const addUserResolvedProblemsToDB = async (route: string, resolvedProblems: UserDataFromDBType[]) => {
 
     try {
-        const resolvedProblemsRef = ref(database, 'user/roadmapTitleId-' + roadmapTitleId); // Passa a instância do banco de dados
+        const resolvedProblemsRef = ref(database, route); 
         await set(resolvedProblemsRef, resolvedProblems)
         return 'User info added successfully!';
 
