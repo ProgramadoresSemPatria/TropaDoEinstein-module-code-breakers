@@ -1,29 +1,24 @@
 "use client";
 import React from "react";
 import SettingsRoundedIcon from "@mui/icons-material/SettingsRounded";
-import QuestionMarkTwoToneIcon from "@mui/icons-material/QuestionMarkTwoTone";
+//import QuestionMarkTwoToneIcon from "@mui/icons-material/QuestionMarkTwoTone";
 import ProgressBar from "./ProgressBar";
 import Tooltip from "./Tooltip";
-import { useTreemapContext } from "../contexts/TreemapContext";
 import { useSettingsContext } from "@/contexts/SettingsContext";
-import SettingsSection from "./SettingsSection";
 
 export default function AsideSection() {
-  const { setEnableResetzoom } = useTreemapContext();
-  const { isSettingsOpen, setIsSettingsOpen } = useSettingsContext();
+  const { setIsSettingsOpen } = useSettingsContext();
 
-  const handleResetZoom = () => {
+  /* const handleResetZoom = () => {
     setEnableResetzoom(true);
     setTimeout(() => {
       setEnableResetzoom(false);
     }, 500);
-  };
+  }; */
 
-  console.log(isSettingsOpen);
 
   return (
     <>
-      <SettingsSection />
       <aside className="hidden lg:flex  w-[22%] h-[calc(100vh-1rem)] bg-customPurple text-white absolute top-2 bottom-2 right-2 overflow-hidden  flex-col items-center justify-between pt-5 pb-16 px-2">
         <div className="flex flex-col items-center gap-8">
           <p>Select Roadmap</p>
@@ -38,12 +33,12 @@ export default function AsideSection() {
 
           <div className="w-full mt-2 flex flex-col gap-2">
             <p className="text-center">(0 / 150)</p>
-            <ProgressBar />
+            <ProgressBar heightProgressBar={12} progressBarValue={5}/>
           </div>
         </div>
 
         <div className="w-full flex justify-between">
-          <Tooltip title={"Reset graph position"}>
+          {/* <Tooltip title={"Reset graph position"}>
             <button
               onClick={() => handleResetZoom()}
               className="px-6 py-[6px] rounded-2xl hover:bg-background transition ease-in-out duration-300"
@@ -55,7 +50,7 @@ export default function AsideSection() {
             <button className="px-6 py-[6px] rounded-2xl hover:bg-background transition ease-in-out duration-300">
               <QuestionMarkTwoToneIcon />
             </button>
-          </Tooltip>
+          </Tooltip> */}
           <Tooltip title={"Settings"}>
             <button
               onClick={() => setIsSettingsOpen(true)}

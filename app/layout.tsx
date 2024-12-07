@@ -7,8 +7,8 @@ import { ProviderWrapper } from "@/contexts/ProviderWrapper";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Bordless Code",
-  description: "Bordless Code - Neetcode",
+  title: "Borderless Code",
+  description: "Borderless Code - Neetcode",
 };
 
 export default function RootLayout({
