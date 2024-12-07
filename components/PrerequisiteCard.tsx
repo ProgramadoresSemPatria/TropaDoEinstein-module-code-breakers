@@ -1,6 +1,8 @@
-import React from 'react'
+'use client';
 
-export default function PrerequisiteCard({ title, description }: { title: string, description: string}) {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export default function PrerequisiteCard({ title, description, link }: { title: string, description: string, link: string }) {
+
   return (
     <div className="w-[225px] h-full flex flex-col gap-3 p-4 bg-background rounded-md">
         <div className="w-full flex items-center justify-between">
