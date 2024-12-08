@@ -61,11 +61,11 @@ export default function WhatsThisSection() {
           ></iframe>
         </div>
 
-        <div className="mt-6 text-right">
+        <div className="mt-6 text-right ">
           <Button
             variant="contained"
             onClick={() => setWhatsThisOpen(false)}
-            className="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-md"
+            className="bg-customPurpleBtn hover:bg-customPurpleBtn text-white px-4 py-2 rounded-md"
           >
             Close
           </Button>
