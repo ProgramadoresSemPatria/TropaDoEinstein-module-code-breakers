@@ -45,6 +45,19 @@ export default function WhatsThisSection() {
           <p>See below for more details.</p>
         </div>
 
+        <div className="mb-4">
+          <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/jgQjes7MgTM"
+            title="YouTube video"
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="rounded-lg"
+          ></iframe>
+        </div>
+
         <div className="mt-6 text-right">
           <Button
             variant="contained"
