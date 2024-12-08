@@ -12,16 +12,19 @@ export default function WhatsThisSection() {
   return (
     <Modal open={isWhatsThisOpen} onClose={() => setWhatsThisOpen(false)}>
       <Box
-        className="bg-white rounded-lg shadow-lg w-full max-w-md mx-auto mt-20 p-6"
+        className="bg-black rounded-lg shadow-lg w-full max-w-md mx-auto mt-20 p-6"
         sx={{
           outline: "none",
         }}
       >
-        <Typography variant="h6" className="font-bold mb-4">
+        <Typography
+          variant="h6"
+          className="font-extrabold mb-10 flex justify-center align-middle text-white"
+        >
           What is this?
         </Typography>
 
-        <div className="text-gray-700 mb-4">
+        <div className="text-gray-300 mb-4">
           <p>
             This graph shows the recommended order to learn different algorithms
             topics.
