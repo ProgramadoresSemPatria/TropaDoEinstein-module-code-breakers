@@ -4,13 +4,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { loginSchema, LoginFormData } from "../schemas/loginSchema";
-import {
-  Box,
-  TextField,
-  Button,
-  Container,
-  Stack,
-} from "@mui/material";
+import { Box, TextField, Button, Container, Stack } from "@mui/material";
 import SignIn from "@/firebase/auth/signIn";
 import { useRouter } from "next/navigation";
 
@@ -23,37 +17,41 @@ export default function LoginPage() {
     resolver: zodResolver(loginSchema),
   });
 
-  const [errorMessage, setErrorMessage] = useState<string>('');
+  const [errorMessage, setErrorMessage] = useState<string>("");
   const router = useRouter();
 
-async function onSubmit(data: LoginFormData) {
-
+  async function onSubmit(data: LoginFormData) {
     const { email, password } = data;
 
     const { result: userCredential, error } = await SignIn(email, password);
 
-        setErrorMessage('');
-        if(error) {
-            if(error && typeof error === 'object' && 'code' in error && error.code === 'auth/invalid-credential') {
-              setErrorMessage('Email e/ou senha inválidos.');
-  
-            }
-            else if(error && typeof error === 'object' && 'code' in error && error.code === 'auth/too-many-requests') {
-              setErrorMessage('Muitas tentativas, tente mais tarde.');
-  
-            }
-            else {
-              setErrorMessage('Erro ao fazer login.');
-            }
-        }
-        else if(userCredential?.user.uid){
-          return router.push('/');
-        }
-  };
+    setErrorMessage("");
+    if (error) {
+      if (
+        error &&
+        typeof error === "object" &&
+        "code" in error &&
+        error.code === "auth/invalid-credential"
+      ) {
+        setErrorMessage("Email e/ou senha inválidos.");
+      } else if (
+        error &&
+        typeof error === "object" &&
+        "code" in error &&
+        error.code === "auth/too-many-requests"
+      ) {
+        setErrorMessage("Muitas tentativas, tente mais tarde.");
+      } else {
+        setErrorMessage("Erro ao fazer login.");
+      }
+    } else if (userCredential?.user.uid) {
+      return router.push("/");
+    }
+  }
 
   return (
     <main className="w-full h-screen flex flex-col justify-center items-center">
-      <Container maxWidth="sm" >
+      <Container maxWidth="sm">
         <Box
           sx={{
             padding: 4,
@@ -63,7 +61,7 @@ async function onSubmit(data: LoginFormData) {
             color: "white",
           }}
         >
-          <h1 className="text-center pb-8 text-2xl">Hello, welcome back.</h1>
+          <h1 className="text-center pb-8 text-2xl">Hello! Welcome back.</h1>
           <form onSubmit={handleSubmit(onSubmit)} noValidate>
             <Stack spacing={3}>
               <TextField
@@ -95,6 +93,13 @@ async function onSubmit(data: LoginFormData) {
                   style: { color: "white" },
                 }}
               />
+              <p>
+                Do not have an account?{" "}
+                <a className="text-blue-500" href="/register">
+                  Click here
+                </a>{" "}
+                to sign up.
+              </p>
               <p className="p-2 text-red-500">{errorMessage}</p>
               <Button
                 type="submit"
