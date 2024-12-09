@@ -48,9 +48,8 @@ const ScrollableTable = () => {
             setPrincipalModalTitle(roadmapTitleInfo?.title || '');
 
             const newTableData = roadmapTitleInfo?.problems.map((eachProblemInfo: ProblemType): TableDataType => {
-                console.log("userDataFromDatabase", userDataFromDatabase)
                 const storedProblem = userDataFromDatabase.find(
-                    (item: UserDataFromDBType) => item.id === eachProblemInfo.id
+                    (item: UserDataFromDBType) => item.problemId === eachProblemInfo.id
                 );
                 return {
                     id: eachProblemInfo.id,
@@ -96,10 +95,12 @@ const ScrollableTable = () => {
                 problems: tableData.map((item: TableDataType) => {
                     const progressBarValue = (numberOfProblemsModalTable.totalStatusChecked / numberOfProblemsModalTable.quantityTableData) * 100;
                     return {
-                        id: item.id,
+                        problemId: item.id,
+                        nodeId: isPrincipalModalSectionOpen.id,
                         isStatusChecked: item.isStatusChecked,
                         isStarChecked: item.isStarChecked,
-                        progressBarValue: progressBarValue
+                        progressBarValue: progressBarValue,
+                        totalStatusChecked: numberOfProblemsModalTable.totalStatusChecked
                     }
                 })
             }
@@ -127,7 +128,6 @@ const ScrollableTable = () => {
         if(hasChanges) {
             saveDataToDB();
             initialTableDataRef.current = tableData;
-
         }
 
     }, [tableData, userAuth?.uid, isPrincipalModalSectionOpen.id, numberOfProblemsModalTable.totalStatusChecked]);
