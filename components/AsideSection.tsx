@@ -1,11 +1,18 @@
 "use client";
-import React, { useEffect, useState } from "react";
+
 import QuestionMarkTwoToneIcon from "@mui/icons-material/QuestionMarkTwoTone";
 import ProgressBar from "./ProgressBar";
 import Tooltip from "./Tooltip";
+import { useTreemapContext } from "../contexts/TreemapContext";
+import { useWhatsThisContext } from "@/contexts/WhatsThisContext";
+import WhatsThisSection from "./WhatsThisSection";
+import React, { useEffect, useState } from "react";
 import { useUserInfoContext } from "@/contexts/UserInfoContext";
-
+        
+        
 export default function AsideSection() {
+  const { setEnableResetzoom } = useTreemapContext();
+  const { isWhatsThisOpen, setWhatsThisOpen } = useWhatsThisContext();
   
   const { userTotalProblemsStatusChecked } = useUserInfoContext();
   const [progressBarValue, setProgressBarValue] = useState<number>(0);
@@ -16,6 +23,16 @@ export default function AsideSection() {
     const progress = (userTotalProblemsStatusChecked / 150) * 100;
     setProgressBarValue(progress);
   }, [userTotalProblemsStatusChecked])
+
+  const handleResetZoom = () => {
+    setEnableResetzoom(true);
+    setTimeout(() => {
+      setEnableResetzoom(false);
+    }, 500);
+  };
+
+  console.log(isWhatsThisOpen);
+
 
   return (
     <>
@@ -37,12 +54,32 @@ export default function AsideSection() {
           </div>
         </div>
 
+        <div className="w-full flex justify-between">
+          <Tooltip title={"Reset graph position"}>
+            <button
+              onClick={() => handleResetZoom()}
+              className="px-6 py-[6px] rounded-2xl hover:bg-background transition ease-in-out duration-300"
+            >
+              Reset
+            </button>
+          </Tooltip>
+
+          <Tooltip title={"What is this?"}>
+            <button
+              onClick={() => setWhatsThisOpen(true)}
+              className="px-6 py-[6px] rounded-2xl hover:bg-background transition ease-in-out duration-300"
+            >
+              <QuestionMarkTwoToneIcon />
+            </button>
+          </Tooltip>
+
         <div className="w-full flex justify-center items-center">
           <Tooltip title={"What is this?"}>
             <button className="px-6 py-[6px] rounded-2xl hover:bg-background transition ease-in-out duration-300">
               <QuestionMarkTwoToneIcon />
             </button>
           </Tooltip> 
+          
         </div>
       </aside>
     </>

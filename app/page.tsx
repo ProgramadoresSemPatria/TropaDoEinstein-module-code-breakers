@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import Header from "@/components/Header";
 import AsideSection from "@/components/AsideSection";
 import ModalSection from "@/components/ModalSection";
+import WhatsThisSection from "@/components/WhatsThisSection";
 
 const TreeMap = dynamic(() => import("../components/TreeMap"), { ssr: false });
 
@@ -12,6 +13,7 @@ export default function Home() {
       <main className="w-full h-full min-h-screen bg-background text-white overflow-hidden relative z-0">
         <TreeMap />
         <AsideSection />
+        <WhatsThisSection />
         <ModalSection />
       </main>
     </>
