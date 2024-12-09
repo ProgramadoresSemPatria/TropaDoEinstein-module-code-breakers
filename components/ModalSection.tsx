@@ -23,8 +23,8 @@ export default function ModalSection() {
     
     const { userAuth } = useAuthContext();
     const { isPrincipalModalSectionOpen, setIsPrincipalModalSectionOpen, principalModalTitle } = useIsModalOpenContext();
-    const { numberOfProblemsModalTable } = useNumberOfProblemsTableContext();
     const { setUserDataFromDatabase } = useUserInfoContext();
+    const { numberOfProblemsModalTable } = useNumberOfProblemsTableContext();
     const [prerequisiteData, setPrerequisiteData] = useState<PrerequisitesType[]>([]);
     const [progressBarInfo, setProgressBarInfo] = useState({  
         id: 0,
@@ -66,9 +66,11 @@ export default function ModalSection() {
             const userData = JSON.parse(localStorage.getItem('user-data') ?? '{}'); 
             const userDataProblems = userData[`problems-id:${isPrincipalModalSectionOpen.id}`] || [];
 
+            console.log("Buscouuuu no LOCAL-Storage")
             const localStorageData = validateUserDataFromDBType(userDataProblems) ? userDataProblems : [];
             setUserDataFromDatabase(localStorageData);
-            console.log("Buscouuuu no LOCAL-Storage")
+            console.log("userDataProblems", userDataProblems)
+            console.log("LocalStorageData", localStorageData)
         }
 
     }, [isPrincipalModalSectionOpen.id, userAuth?.uid]);
