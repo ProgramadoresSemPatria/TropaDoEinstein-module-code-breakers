@@ -1,30 +1,26 @@
 "use client";
-import React, { useState } from "react";
-import { Modal, Box, Button, Typography } from "@mui/material";
+import React from "react";
+import { Modal, Box, Typography } from "@mui/material";
 import { useWhatsThisContext } from "@/contexts/WhatsThisContext";
-import { useTreemapContext } from "@/contexts/TreemapContext";
+import CustomButton from "./CustomButton";
 
 export default function WhatsThisSection() {
-  const [panning, setPanning] = useState(true);
-  const [zooming, setZooming] = useState(true);
+  
   const { isWhatsThisOpen, setWhatsThisOpen } = useWhatsThisContext();
 
   return (
     <Modal open={isWhatsThisOpen} onClose={() => setWhatsThisOpen(false)}>
       <Box
-        className="bg-black rounded-lg shadow-lg w-full max-w-md mx-auto mt-20 p-6"
+        className="bg-background text-white rounded-lg shadow-lg w-full max-w-md mx-auto mt-20 p-6 flex flex-col gap-4"
         sx={{
           outline: "none",
         }}
       >
-        <Typography
-          variant="h6"
-          className="font-extrabold mb-10 flex justify-center align-middle text-white"
-        >
+        <Typography variant="h6" className="font-bold ">
           What is this?
         </Typography>
 
-        <div className="text-gray-300 mb-4">
+        <div className="mb-4">
           <p>
             This graph shows the recommended order to learn different algorithms
             topics.
@@ -38,7 +34,7 @@ export default function WhatsThisSection() {
               found in the Practice page.
             </li>
             <li>
-              Get stuck? I've created a detailed 🎥 video explanation for each
+              Get stuck? I&apos;ve created a detailed 🎥 video explanation for each
               problem.
             </li>
             <li>
@@ -48,27 +44,11 @@ export default function WhatsThisSection() {
           <p>See below for more details.</p>
         </div>
 
-        <div className="mb-4">
-          <iframe
-            width="100%"
-            height="315"
-            src="https://www.youtube.com/embed/jgQjes7MgTM"
-            title="YouTube video"
-            frameBorder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="rounded-lg"
-          ></iframe>
-        </div>
-
-        <div className="mt-6 text-right ">
-          <Button
-            variant="contained"
+        <div className="mt-4 text-right">
+          <CustomButton 
             onClick={() => setWhatsThisOpen(false)}
-            className="bg-customPurpleBtn hover:bg-customPurpleBtn text-white px-4 py-2 rounded-md"
-          >
-            Close
-          </Button>
+            bgColor={'var(--customPurpleBtn)'}
+            >Close</CustomButton>
         </div>
       </Box>
     </Modal>
