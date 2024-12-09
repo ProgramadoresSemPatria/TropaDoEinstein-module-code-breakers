@@ -40,15 +40,22 @@ export interface PrerequisitesType {
 }
 
 export interface UserDataFromDBType {
-    id: number;
+    problemId: number;
+    nodeId: number;
     isStarChecked: boolean;
     isStatusChecked: boolean;
     progressBarValue: number;
+    totalStatusChecked: number;
 }
 
 export type UserDataFromDBArrayType = UserDataFromDBType[];
 
 export interface ProgressBarInfoType {
-    id: number,
+    nodeId: number,
     progressBarValue: number;
+    totalStatusChecked: number;
+}
+
+export interface UserDataFromStorageType {
+    [key: string]: UserDataFromDBType[]
 }
