@@ -19,7 +19,7 @@ export default function ProgressBar({ heightProgressBar, progressBarValue }: { h
       },
       [`& .${linearProgressClasses.bar}`]: {
         borderRadius: 5,
-        backgroundColor: '#15bb89',
+        backgroundColor: '#00eea7',
       },
     }));
 
