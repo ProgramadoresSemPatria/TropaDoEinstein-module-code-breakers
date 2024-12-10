@@ -5,8 +5,9 @@ It uses React Flow for creating and managing interactive graphs and uses Firebas
 
 # Content
 
-[Technologies Used](#technologies-used)
-[Getting Started](#getting-started)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Components](#components)
 
 ## Technologies Used
 
@@ -19,9 +20,10 @@ It uses React Flow for creating and managing interactive graphs and uses Firebas
 ## Getting Started
 
 **FIRST OF ALL:**
-[!IMPORTANT]
-Without the dependencies, the project will not run.
-To install the dependencies:
+
+- Without the dependencies, the project will not run.
+
+- To install the dependencies:
 
 **npm install**
 
@@ -53,18 +55,18 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 The Treemap component is a core part of the application. It renders a treemap graph using React Flow, visually representing nodes (topics) and edges (relationships between topics). It includes features like automatic layout using dagre, custom node rendering, and interactive functionalities.
 
-[Treemap Structure](#Treemap-structure)
-[Props](#Props)
-[Component Logic](#Component-Logic)
-[Key Functionalities](#Key-Functionalities)
-[CustomNode Component](#CustomNode-Component)
-[initialNodes and initialEdges](#initialnodes-and-initialedges)
+- [Treemap Structure](#Treemap-structure)
+- [Props](#Props)
+- [Component Logic](#Component-Logic)
+- [Key Functionalities](#Key-Functionalities)
+- [CustomNode Component](#CustomNode-Component)
+- [initialNodes and initialEdges](#initialnodes-and-initialedges)
 
 ### Treemap Structure
 
 For this Treemap Graph we use react flow for graph rendering, node/edge management, and controls.
 To handles automatic layouting of nodes we use Dagre.
-To manage modal state to display additional node information we use a custom context called [useIsModalOpenContext](#useIsModalOpenContext)
+To manage modal state to display additional node information we use a custom context called [useIsModalOpenContext].(#useIsModalOpenContext)
 
 **Dagre Layout Calculation**
 
@@ -126,8 +128,6 @@ To manage modal state to display additional node information we use a custom con
 
 ## Props
 
-_This component does not accept external props, but it relies on the following internally:_
-
 ### initialNodes and initialEdges
 
 - Imported from a utility file (graphInfo).
@@ -152,18 +152,18 @@ Customizes the appearance and behavior of nodes rendered in the graph.
 # Aside Section
 
 The AsideSection component is a sidebar. It provides navigation options (e.g., selecting a roadmap), displays progress with a progress bar, and includes a tooltip for additional guidance.
-[Aside Section Structure](#aside-section-structure)
-[Aside Section Props](#aside-section-props)
-[Aside Section States](#aside-section-states)
-[Aside Section Effects](#aside-section-effects)
-[Aside Section Key Functionalities](#aside-section-key-functionalities)
+
+- [Aside Section Structure](#aside-section-structure)
+- [Aside Section Props](#aside-section-props)
+- [Aside Section States](#aside-section-states)
+- [Aside Section Effects](#aside-section-effects)
+- [Aside Section Key Functionalities](#aside-section-key-functionalities)
 
 ## Aside Section Structure
 
 **Custom Components**
 
 - ProgressBar: A reusable progress bar component.
-- Tooltip: A reusable tooltip component.
 - Context: useUserInfoContext to access user-related data.
 
 **Key Sections**
@@ -219,15 +219,15 @@ The AsideSection component is a sidebar. It provides navigation options (e.g., s
 
 The ModalSection component serves as a modal interface that dynamically displays detailed information based on user interactions. It includes a progress bar, a list of prerequisites, and a data table. The modal fetches and processes data from both Firebase and local storage, ensuring the user's progress and related information are presented correctly.
 
-[Modal Section Structure](#modal-section-structure)
-[Modal Section Props](#modal-section-props)
+- [Modal Section Structure](#modal-section-structure)
+- [Modal Section Props](#modal-section-props)
 
 ## Modal Section Structure
 
-[Custom Components](#custom-components)
-[Contexts](#contexts)
-[Data](#data)
-[Types](#types)
+- [Custom Components](#custom-components)
+- [Contexts](#contexts)
+- [Data](#data)
+- [Types](#types)
 
 ### Custom Components:
 
@@ -242,7 +242,9 @@ The ModalSection component serves as a modal interface that dynamically displays
 - NumberOfProblemsTableContext: Provides data on problem counts and status.
 - AuthContext: Manages authentication state.
 - UserInfoContext: Manages user-related information fetched from Firebase or local storage.
-- Utility Functions:
+
+### Utility Functions:
+
 - getDataFromDB: Fetches data from Firebase.
 - validateUserDataFromDBType: Validates user data format.
 
@@ -256,11 +258,11 @@ The ModalSection component serves as a modal interface that dynamically displays
 
 ## Modal Section Props
 
-[Context Dependencies](#context-dependencies)
-[AuthContext](#auth-context)
-[UserInfoContext](#user-info-context)
-[Modal Section States](#modal-section-states)
-[Modal Section Effects](#modal-section-effects)
+- [Context Dependencies](#context-dependencies)
+- [AuthContext](#auth-context)
+- [UserInfoContext](#user-info-context)
+- [Modal Section States](#modal-section-states)
+- [Modal Section Effects](#modal-section-effects)
 
 ### Context Dependencies
 
