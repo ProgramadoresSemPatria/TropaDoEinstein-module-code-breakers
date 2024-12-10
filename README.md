@@ -45,9 +45,9 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 # Components
 
-[Treemap](#Treemap)
-[Aside Section](#aside-section)
-[Modal Section](#modal-section)
+- [Treemap](#Treemap)
+- [Aside Section](#aside-section)
+- [Modal Section](#modal-section)
 
 ## Treemap
 
