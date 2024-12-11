@@ -8,6 +8,7 @@ It uses React Flow for creating and managing interactive graphs and uses Firebas
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
 - [Components](#components)
+- [Contexts](#contexts)
 
 ## Technologies Used
 
@@ -221,11 +222,12 @@ The ModalSection component serves as a modal interface that dynamically displays
 
 - [Modal Section Structure](#modal-section-structure)
 - [Modal Section Props](#modal-section-props)
+- [Modal Section Table](#modal-section-table)
 
 ## Modal Section Structure
 
 - [Custom Components](#custom-components)
-- [Contexts](#contexts)
+- [Modal Section Contexts](#modal-section-contexts)
 - [Data](#data)
 - [Types](#types)
 
@@ -236,7 +238,7 @@ The ModalSection component serves as a modal interface that dynamically displays
 - PrerequisiteCard: For displaying individual prerequisites.
 - ModalSectionTable (dynamic import): Displays a table of problems related to the selected topic.
 
-### Contexts
+### Modal Section Contexts
 
 - IsModalOpenContext: Tracks modal open/close state and associated metadata.
 - NumberOfProblemsTableContext: Provides data on problem counts and status.
@@ -259,8 +261,8 @@ The ModalSection component serves as a modal interface that dynamically displays
 ## Modal Section Props
 
 - [Context Dependencies](#context-dependencies)
-- [AuthContext](#auth-context)
-- [UserInfoContext](#user-info-context)
+- [AuthContext](#authcontext)
+- [UserInfoContext](#userinfocontext)
 - [Modal Section States](#modal-section-states)
 - [Modal Section Effects](#modal-section-effects)
 
@@ -318,3 +320,141 @@ Updates prerequisiteData state.
 **Dynamic Table**
 
 Dynamically imports and renders ModalSectionTable for displaying detailed problem data.
+
+## Modal Section Table
+
+The ModalSectionTable component displays a dynamic table of problem-solving tasks for a roadmap. Users can mark problems as solved, star them for importance, and access problem and solution links. The table also tracks and saves user progress in the database or local storage.
+
+### Features
+
+- Dynamic Table Population: Populates the table with data based on the selected roadmap section.
+
+**User Interaction:**
+
+- Mark problems as solved using a checkbox.
+- Star problems for prioritization.
+- Access problem and solution links directly from the table.
+
+**Real-Time Progress Tracking:**
+
+- Tracks the number of solved problems and updates the progress bar dynamically.
+- Saves progress data to Firebase or local storage based on user authentication.
+
+**Custom Styling:**
+
+- Differentiates rows with solved problems using background colors.
+- Displays difficulty with distinct colors for "Easy," "Medium," and "Hard."
+
+### State Management
+
+**State Variables:**
+
+- tableData: Stores the current table data (problems, solved status, starred status, etc.)
+- initialTableDataRef: Tracks the initial state of the table for detecting changes.
+
+### Effects
+
+- Data Population: Fills the table when the modal is open.
+- Progress Tracking: Updates progress bar data whenever tableData changes.
+- Data Saving: Saves user progress either to Firebase or local storage.
+
+# Contexts
+
+To ensure that the code would be clean and the application would have access to all of the shared states, we've encapsulate the context into a single wrapper which is called **ProviderWrapper**.
+Here you can see the contexts that compose the Provider:
+
+- [isModalOpenContext](#is-modal-open-context)
+- [NumberOfProblemsTableContext](#number-of-problems-table-context)
+- [TreemapContext](#treemapcontext)
+- [UserInfoContext](#user-info-context)
+- [WhatsThisContext](#whats-this-context)
+
+# isModalOpenContext
+
+The **IsModalOpenContext** provides a way to manage and access the state related to the visibility and configuration of the principal modal into the application.
+The modal that is opened when you a card is clicked is managed by this context.
+
+## Context Values
+
+**isPrincipalModalSectionOpen:**
+
+- Type: { value: boolean; id: number }
+- Description: Tracks whether the modal is open (value) and its associated ID (id).
+
+**setIsPrincipalModalSectionOpen:**
+
+- Type: (value: { value: boolean; id: number }) => void
+- Description: Function to update the modal's open state and ID.
+
+**principalModalTitle:**
+
+- Type: string
+- Description: The title of the modal.
+
+**setPrincipalModalTitle:**
+
+- Type: (value: string) => void
+- Description: Function to update the modal title.
+
+# NumberOfProblemsTableContext
+
+The **NumberOfProblemsTableContext** manages and provides access to the state related to the modal table's problem count and status in the application.
+
+## Context Values
+
+**numberOfProblemsModalTable:**
+
+- Type: { quantityTableData: number; totalStatusChecked: number }
+- Description: Represents the current state of the modal table:
+- quantityTableData: Number of table data items.
+- totalStatusChecked: Count of checked statuses.
+
+**setNumberOfProblemsModalTable:**
+
+- Type: (value: { quantityTableData: number; totalStatusChecked: number }) => void
+- Description: Function to update the numberOfProblemsModalTable state.
+
+# User Info Context
+
+The UserInfoContext is a designed to manage and provide user-related data across the application. This includes user information retrieved from the database and their total problems' status checked.
+
+## Context Values
+
+**userDataFromDatabase**
+
+- Type: UserDataFromDBArrayType
+- Default Value: An empty array [].
+- Description: Represents the user's data fetched from the database.
+
+**setUserDataFromDatabase:**
+
+- Type: (value: UserDataFromDBArrayType) => void
+- Description: Function to update the userDataFromDatabase state.
+
+**userTotalProblemsStatusChecked:**
+
+- Type: number
+- Default Value: 0.
+- Description: Represents the total number of problems checked by the user.
+
+**setUserTotalProblemsStatusChecked:**
+
+- Type: (value: number) => void
+- Description: Function to update the userTotalProblemsStatusChecked state.
+
+# WhatsThisContext
+
+The **WhatsThisContext** is a React context that provides state management for controlling the visibility of a "What's This?" section into the application.
+
+## Context Values
+
+**isWhatsThisOpen**
+
+- Type: boolean
+- Default Value: false
+- Description: Indicates whether the "What's This?" modal or section is open (true) or closed (false).
+
+**setWhatsThisOpen**
+
+- Type: (value: boolean) => void
+- Description: A function to update the state of isWhatsThisOpen. Pass true to open or false to close the modal.
