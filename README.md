@@ -393,6 +393,32 @@ This is a LoginPage component built with React and Next.js. The component utiliz
 
 - On successful login (validated by the presence of a user ID), the user is redirected to the home page using router.push("/").
 
+# Register Page
+
+The RegisterPage component provides users the ability to register for an account by entering their name, email, and password. It uses Firebase for authentication and database storage. The page is styled using Material-UI components and integrates form validation with react-hook-form and Zod.
+
+## Features
+
+**User Registration**
+
+- Allows users to register by entering their name, email, and password.
+- Upon successful registration, the user's data is saved to Firebase Realtime Database.
+
+**Form Validation**
+
+- Utilizes react-hook-form for handling form submissions.
+- Leverages Zod and its resolver for schema-based validation to ensure correct data input.
+
+**Error Handling**
+
+- Displays user-friendly error messages for:
+- Email already in use.
+- Other authentication errors.
+
+**Navigation**
+
+- Redirects users to the login page (/login) after successful registration.
+
 # Contexts
 
 To ensure that the code would be clean and the application would have access to all of the shared states, we've encapsulate the context into a single wrapper which is called **ProviderWrapper**.
