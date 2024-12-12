@@ -1,0 +1,1412 @@
+{
+    "arrays-and-hashing": {
+        "id": 1,
+        "title": "Arrays and Hashing",
+        "prerequisites": [
+            {
+                "title": "Dynamic Arrays",
+                "description": "Data Structures & Algorithms for Beginners",
+                "link": "https://neetcode.io/courses/dsa-for-beginners/3"
+            },
+            {
+                "title": "Hash Usage",
+                "description": "Data Structures & Algorithms for Beginners",
+                "link": "https://neetcode.io/courses/dsa-for-beginners/26"
+            },
+            {
+                "title": "Hash Implementation",
+                "description": "Data Structures & Algorithms for Beginners",
+                "link": "https://neetcode.io/courses/dsa-for-beginners/27"
+            },
+            {
+                "title": "Prefix Sums",
+                "description": "Advanced Algorithms",
+                "link": "https://neetcode.io/courses/advanced-algorithms/4"
+            }
+        ],
+        "problems": [
+            {
+                "id": 1,
+                "name": "Contains Duplicate",
+                "difficulty": "Easy",
+                "problemLink": "https://leetcode.com/problems/contains-duplicate/",
+                "solutionLink": "https://www.youtube.com/embed/3OamzN90kPg?si=Yzj1CvVme-1WRAvI"
+            },
+            {
+                "id": 2,
+                "name": "Valid Anagram",
+                "difficulty": "Easy",
+                "problemLink": "https://leetcode.com/problems/valid-anagram/",
+                "solutionLink": "https://www.youtube.com/embed/9UtInBqnCgA?si=-zZOIyn8SjmFlZLl"
+            },
+            {
+                "id": 3,
+                "name": "Two Sum",
+                "difficulty": "Easy",
+                "problemLink": "https://leetcode.com/problems/two-sum/",
+                "solutionLink": "https://www.youtube.com/embed/KLlXCFG5TnA?si=NLPCfu_BMwV8ic_x"
+            },
+            {
+                "id": 4,
+                "name": "Group Anagrams",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/group-anagrams/",
+                "solutionLink": "https://www.youtube.com/embed/vzdNOK2oB2E?si=1n4LKyTeF2U3cs0h"
+            },
+            {
+                "id": 5,
+                "name": "Top K Frequent Elements",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/top-k-frequent-elements/",
+                "solutionLink": "https://www.youtube.com/embed/YPTqKIgVk-k?si=zcM1tmtYRgCcPL8r"
+            },
+            {
+                "id": 6,
+                "name": "Encode and Decode Strings ",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/encode-and-decode-strings/",
+                "solutionLink": "https://www.youtube.com/embed/B1k_sxOSgv8?si=k7NgkQDKZxUD4bQY"
+            },
+            {
+                "id": 7,
+                "name": "Product of Array Except Self",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/product-of-array-except-self/",
+                "solutionLink": "https://www.youtube.com/embed/bNvIQI2wAjk?si=o4SmOJtNxcfrVmMn"
+            },
+            {
+                "id": 8,
+                "name": "Valid Sudoku",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/valid-sudoku/",
+                "solutionLink": "https://www.youtube.com/embed/TjFXEUCMqI8?si=rwLMuMuq35S1aBXB"
+            },
+            {
+                "id": 9,
+                "name": "Longest Consecutive Sequence",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/longest-consecutive-sequence/",
+                "solutionLink": "https://www.youtube.com/embed/P6RZZMu_maU?si=ii41aWp3x_cpVW6"
+            }
+        ]
+    },
+    "two-pointers": {
+        "id": 2,
+        "title": "Two Pointers",
+        "prerequisites": [
+            {
+                "title": "Two Pointers",
+                "description": "Advanced Algorithms",
+                "link": "https://neetcode.io/courses/advanced-algorithms/3"
+            }
+        ],
+        "problems": [
+            {
+                "id": 10,
+                "name": "Valid Palindrome ",
+                "difficulty": "Easy",
+                "problemLink": "https://leetcode.com/problems/valid-palindrome/",
+                "solutionLink": "https://www.youtube.com/embed/jJXJ16kPFWg?si=umYOJS2e50bPOh8Z"
+            },
+            {
+                "id": 11,
+                "name": "Two Sum II Input Array Is Sorted ",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/",
+                "solutionLink": "https://www.youtube.com/embed/cQ1Oz4ckceM?si=mjcDbALtWcssrPqT"
+            },
+            {
+                "id": 12,
+                "name": "3Sum",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/3sum/",
+                "solutionLink": "https://www.youtube.com/embed/jzZsG8n2R9A?si=44oyr7iEJitMZH1W"
+            },
+            {
+                "id": 13,
+                "name": "Container With Most Water",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/container-with-most-water/",
+                "solutionLink": "https://www.youtube.com/embed/UuiTKBwPgAo?si=BLuS9my2WdNQJMRQ"
+            },
+            {
+                "id": 14,
+                "name": "Trapping Rain Water",
+                "difficulty": "Hard",
+                "problemLink": "https://leetcode.com/problems/trapping-rain-water/",
+                "solutionLink": "https://www.youtube.com/embed/ZI2z5pq0TqA?si=LAGAvTx0TsKySGPq"
+            }
+        ]
+    },
+    "stack": {
+        "id": 3,
+        "title": "Stack",
+        "prerequisites": [
+            {
+                "title": "Stacks",
+                "description": "Data Structures & Algorithms for Beginners",
+                "link": "https://neetcode.io/courses/dsa-for-beginners/4"
+            }
+        ],
+        "problems": [
+            {
+                "id": 15,
+                "name": "Valid Parentheses",
+                "difficulty": "Easy",
+                "problemLink": "https://leetcode.com/problems/valid-parentheses/",
+                "solutionLink": "https://www.youtube.com/embed/WTzjTskDFMg?si=_WmOvkpRs9FbS02F"
+            },
+            {
+                "id": 16,
+                "name": "Min Stack",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/min-stack/",
+                "solutionLink": "https://www.youtube.com/embed/qkLl7nAwDPo?si=Yjob0M9gdWdz0bJF"
+            },
+            {
+                "id": 17,
+                "name": "Evaluate Reverse Polish Notation",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/evaluate-reverse-polish-notation/",
+                "solutionLink": "https://www.youtube.com/embed/iu0082c4HDE?si=TQ1tJu_83XMLm3Ap"
+            },
+            {
+                "id": 18,
+                "name": "Generate Parentheses",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/generate-parentheses/",
+                "solutionLink": "https://www.youtube.com/embed/s9fokUqJ76A?si=U4jQUxgnUHDJN6RF"
+            },
+            {
+                "id": 19,
+                "name": "Daily Temperatures",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/daily-temperatures/",
+                "solutionLink": "https://www.youtube.com/embed/cTBiBSnjO3c?si=DO3G-HxQq1AZrlDF"
+            },
+            {
+                "id": 20,
+                "name": "Car Fleet",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/car-fleet/",
+                "solutionLink": "https://www.youtube.com/embed/Pr6T-3yB9RM?si=TNFoiLqTg1gsmbxU"
+            },
+            {
+                "id": 21,
+                "name": "Largest Rectangle In Histogram ",
+                "difficulty": "Hard",
+                "problemLink": "https://leetcode.com/problems/largest-rectangle-in-histogram/",
+                "solutionLink": "https://www.youtube.com/embed/zx5Sw9130L0?si=1ZqX45Q4d0Cdbewt"
+            }
+        ]
+    },
+    "binary-search": {
+        "id": 4,
+        "title": "Binary Search",
+        "prerequisites": [
+            {
+                "title": "Search Array",
+                "description": "Data Structures & Algorithms for Beginners",
+                "link": "https://neetcode.io/courses/dsa-for-beginners/14"
+            },
+            {
+                "title": "Search Range",
+                "description": "Data Structures & Algorithms for Beginners",
+                "link": "https://neetcode.io/courses/dsa-for-beginners/15"
+            }
+        ],
+        "problems": [
+            {
+                "id": 22,
+                "name": "Binary Search ",
+                "difficulty": "Easy",
+                "problemLink": "https://leetcode.com/problems/binary-search/",
+                "solutionLink": "https://www.youtube.com/embed/s4DPM8ct1pI?si=9AEEvvpoFStY9cCI"
+            },
+            {
+                "id": 23,
+                "name": "Search a 2D Matrix",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/search-a-2d-matrix/",
+                "solutionLink": "https://www.youtube.com/embed/s4DPM8ct1pI?si=HRFMf5g1DVyndDu5"
+            },
+            {
+                "id": 24,
+                "name": "Koko Eating Bananas",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/koko-eating-bananas/",
+                "solutionLink": "https://www.youtube.com/embed/U2SozAs9RzA?si=15-wyhNUqnIo_nd0"
+            },
+            {
+                "id": 25,
+                "name": "Find Minimum In Rotated Sorted Array",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
+                "solutionLink": "https://www.youtube.com/embed/nIVW4P8b1VA?si=B_aW2vBfUkO0cbLZ"
+            },
+            {
+                "id": 26,
+                "name": "Search In Rotated Sorted Array",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+                "solutionLink": "https://www.youtube.com/embed/U8XENwh8Oy8?si=atNwm6Qq9TboZXs6"
+            },
+            {
+                "id": 27,
+                "name": "Time Based Key Value Store",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/time-based-key-value-store/",
+                "solutionLink": "https://www.youtube.com/embed/fu2cD_6E8Hw?si=rQgFPB-7yif3t9Mf"
+            },
+            {
+                "id": 28,
+                "name": "Median of Two Sorted Arrays",
+                "difficulty": "Hard",
+                "problemLink": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
+                "solutionLink": "https://www.youtube.com/embed/q6IEA26hvXc?si=nHEZR_rFuAizemo2"
+            }
+        ]
+    },
+    "sliding-window": {
+        "id": 5,
+        "title": "Sliding Window",
+        "prerequisites": [
+            {
+                "title": "Sliding Window Fixed Size",
+                "description": "Advanced Algorithms",
+                "link": "https://neetcode.io/courses/advanced-algorithms/1"
+            },
+            {
+                "title": "Sliding Window Variable Size",
+                "description": "Advanced Algorithms",
+                "link": "https://neetcode.io/courses/advanced-algorithms/2"
+            }
+        ],
+        "problems": [
+            {
+                "id": 29,
+                "name": "Best Time to Buy And Sell Stock",
+                "difficulty": "Easy",
+                "problemLink": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+                "solutionLink": "https://www.youtube.com/embed/1pkOgXD63yU?si=MNd350vC_Eb-fSHI"
+            },
+            {
+                "id": 30,
+                "name": "Longest Substring Without Repeating Characters",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/longest-substring-without-repeating-charactersLink/",
+                "solutionLink": "https://www.youtube.com/embed/wiGpQwVHdE0?si=YJrP69Lm6q22uNfz"
+            },
+            {
+                "id": 31,
+                "name": "Longest Repeating Character Replacement",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/longest-repeating-character-replacement/",
+                "solutionLink": "https://www.youtube.com/embed/gqXU1UyA8pk?si=ca8NZqEchrf3WqbU"
+            },
+            {
+                "id": 32,
+                "name": "Permutation In String",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/permutation-in-string/",
+                "solutionLink": "https://www.youtube.com/embed/UbyhOgBN834?si=2fMaN72RWMVZY7_8"
+            },
+            {
+                "id": 33,
+                "name": "Minimum Window Substring",
+                "difficulty": "Hard",
+                "problemLink": "https://leetcode.com/problems/minimum-window-substring/",
+                "solutionLink": "https://www.youtube.com/embed/jSto0O4AJbM?si=QWSI9NrXhdO44pjs"
+            },
+            {
+                "id": 34,
+                "name": "Sliding Window Maximum",
+                "difficulty": "Hard",
+                "problemLink": "https://leetcode.com/problems/sliding-window-maximum/",
+                "solutionLink": "https://www.youtube.com/embed/DfljaUwZsOk?si=Xcto77bGQo4IJuJ-"
+            }
+        ]
+    },
+    "linked-list": {
+        "id": 6,
+        "title": "Linked List",
+        "prerequisites": [
+            {
+                "title": "Singly Linked Lists",
+                "description": "Data Structures & Algorithms for Beginners",
+                "link": "https://neetcode.io/courses/dsa-for-beginners/5"
+            },
+            {
+                "title": "Doubly Linked Lists",
+                "description": "Data Structures & Algorithms for Beginners",
+                "link": "https://neetcode.io/courses/dsa-for-beginners/6"
+            },
+            {
+                "title": "Fast and Slow Pointers",
+                "description": "Advanced Algorithms",
+                "link": "https://neetcode.io/courses/advanced-algorithms/5"
+            }
+        ],
+        "problems": [
+            {
+                "id": 35,
+                "name": "Reverse Linked List",
+                "difficulty": "Easy",
+                "problemLink": "https://leetcode.com/problems/reverse-linked-list/",
+                "solutionLink": "https://www.youtube.com/embed/G0_I-ZF0S38?si=dViFbYbem7uxIn2a"
+            },
+            {
+                "id": 36,
+                "name": "Merge Two Sorted Lists",
+                "difficulty": "Easy",
+                "problemLink": "https://leetcode.com/problems/merge-two-sorted-lists/",
+                "solutionLink": "https://www.youtube.com/embed/XIdigk956u0?si=LOx4gntnqwUvzUbr"
+            },
+            {
+                "id": 37,
+                "name": "Reorder List",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/reorder-list/",
+                "solutionLink": "https://www.youtube.com/embed/S5bfdUTrKLM?si=Wzv4l93FdSt1BdNJ"
+            },
+            {
+                "id": 38,
+                "name": "Remove Nth Node From End of List ",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+                "solutionLink": "https://www.youtube.com/embed/XVuQxVej6y8?si=yGZWzc0ONGUyRDx_"
+            },
+            {
+                "id": 39,
+                "name": "Copy List With Random Pointer",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/copy-list-with-random-pointer/",
+                "solutionLink": "https://www.youtube.com/embed/5Y2EiZST97Y?si=A8VEqHPhblEEBd7e"
+            },
+            {
+                "id": 40,
+                "name": "Add Two Numbers",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/add-two-numbers/",
+                "solutionLink": "https://www.youtube.com/embed/wgFPrzTjm7s?si=bAEzAaCiCtnO-wZb"
+            },
+            {
+                "id": 41,
+                "name": "Linked List Cycle",
+                "difficulty": "Easy",
+                "problemLink": "https://leetcode.com/problems/linked-list-cycle/",
+                "solutionLink": "https://www.youtube.com/embed/gBTe7lFR3vc?si=cKH8JvGHhK6VgfD7"
+            },
+            {
+                "id": 42,
+                "name": "Find The Duplicate Number ",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/find-the-duplicate-number/",
+                "solutionLink": "https://www.youtube.com/embed/wjYnzkAhcNk?si=ARpaQuCg9TLOu_ET"
+            },
+            {
+                "id": 43,
+                "name": "LRU Cache",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/lru-cache/",
+                "solutionLink": "https://www.youtube.com/embed/7ABFKPK2hD4?si=lxk0ORAEhLYLMO9u"
+            },
+            {
+                "id": 44,
+                "name": "Merge K Sorted Lists",
+                "difficulty": "Hard",
+                "problemLink": "https://leetcode.com/problems/merge-k-sorted-lists/",
+                "solutionLink": "https://www.youtube.com/embed/q5a5OiGbT6Q?si=GaO5QsVwaqOPotO9"
+            },
+            {
+                "id": 45,
+                "name": "Reverse Nodes In K Group",
+                "difficulty": "Hard",
+                "problemLink": "https://leetcode.com/problems/reverse-nodes-in-k-group/",
+                "solutionLink": "https://www.youtube.com/embed/1UOPsfP85V4?si=Sc3p3RoNGejk2NR7"
+            }
+        ]
+    },
+    "trees": {
+        "id": 7,
+        "title": "Trees",
+        "prerequisites": [
+            {
+                "title": "BST Insert and Remove",
+                "description": "Data Structures & Algorithms for Beginners",
+                "link": "https://neetcode.io/courses/dsa-for-beginners/18"
+            },
+            {
+                "title": "Depth-First Search",
+                "description": "Data Structures & Algorithms for Beginners",
+                "link": "https://neetcode.io/courses/dsa-for-beginners/19"
+            },
+            {
+                "title": "Breadth-First Search",
+                "description": "Data Structures & Algorithms for Beginners",
+                "link": "https://neetcode.io/courses/dsa-for-beginners/20"
+            },
+            {
+                "title": "BST Sets and Maps",
+                "description": "Data Structures & Algorithms for Beginners",
+                "link": "https://neetcode.io/courses/dsa-for-beginners/21"
+            },
+            {
+                "title": "Iterative DFS",
+                "description": "Advanced Algorithms",
+                "link": "https://neetcode.io/courses/advanced-algorithms/9"
+            }
+        ],
+        "problems": [
+            {
+                "id": 46,
+                "name": "Invert Binary Tree",
+                "difficulty": "Easy",
+                "problemLink": "https://leetcode.com/problems/invert-binary-tree/",
+                "solutionLink": "https://www.youtube.com/embed/OnSn2XEQ4MY?si=d9sThAOoiPxuR0a6"
+            },
+            {
+                "id": 47,
+                "name": "Maximum Depth of Binary Tree",
+                "difficulty": "Easy",
+                "problemLink": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+                "solutionLink": "https://www.youtube.com/embed/hTM3phVI6YQ?si=HztW4wVeW8PwbkKl"
+            },
+            {
+                "id": 48,
+                "name": "Diameter of Binary Tree",
+                "difficulty": "Easy",
+                "problemLink": "https://leetcode.com/problems/diameter-of-binary-tree/",
+                "solutionLink": "https://www.youtube.com/embed/K81C31ytOZE?si=isBKsfbALDmAmcbF"
+            },
+            {
+                "id": 49,
+                "name": "Balanced Binary Tree",
+                "difficulty": "Easy",
+                "problemLink": "https://leetcode.com/problems/balanced-binary-tree/",
+                "solutionLink": "https://www.youtube.com/embed/QfJsau0ItOY?si=ITqAIX_b0xZXlmdO"
+            },
+            {
+                "id": 50,
+                "name": "Same Tree",
+                "difficulty": "Easy",
+                "problemLink": "https://leetcode.com/problems/same-tree/",
+                "solutionLink": "https://www.youtube.com/embed/vRbbcKXCxOw?si=CR60N_IHMxu2Fqe8"
+            },
+            {
+                "id": 51,
+                "name": "Subtree of Another Tree",
+                "difficulty": "Easy",
+                "problemLink": "https://leetcode.com/problems/same-tree/",
+                "solutionLink": "https://www.youtube.com/embed/E36O5SWp-LE?si=4bT2SeIVgqOvHxRi"
+            },
+            {
+                "id": 52,
+                "name": "Lowest Common Ancestor of a Binary Search Tree",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
+                "solutionLink": "https://www.youtube.com/embed/gs2LMfuOR9k?si=pF0u1dEIaNwV5hhW"
+            },
+            {
+                "id": 53,
+                "name": "Binary Tree Level Order Traversal",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+                "solutionLink": "https://www.youtube.com/embed/6ZnyEApgFYg?si=2lgir8TJlMLhlnvv"
+            },
+            {
+                "id": 54,
+                "name": "Binary Tree Right Side View",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/binary-tree-right-side-view/",
+                "solutionLink": "https://www.youtube.com/embed/d4zLyf32e3I?si=q_lvSWhXM5FiI_uH"
+            },
+            {
+                "id": 55,
+                "name": "Count Good Nodes In Binary Tree",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/count-good-nodes-in-binary-tree/",
+                "solutionLink": "https://www.youtube.com/embed/7cp5imvDzl4?si=2YvWFibbvy8Xeccy"
+            },
+            {
+                "id": 56,
+                "name": "Validate Binary Search Tree",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/validate-binary-search-tree/",
+                "solutionLink": "https://www.youtube.com/embed/s6ATEkipzow?si=xc6EljaNtCy8vDU4"
+            },
+            {
+                "id": 57,
+                "name": "Kth Smallest Element In a Bst",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
+                "solutionLink": "https://www.youtube.com/embed/5LUXSvjmGCw?si=BMqAW7aImWwe7JIy"
+            },
+            {
+                "id": 58,
+                "name": "Construct Binary Tree From Preorder And Inorder Traversal",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/constructLink-binary-tree-from-preorder-and-inorder-traversal/",
+                "solutionLink": "https://www.youtube.com/embed/ihj4IQGZ2zc?si=ioh7_oKNwtmOvMfV"
+            },
+            {
+                "id": 59,
+                "name": "Binary Tree Maximum Path Sum",
+                "difficulty": "Hard",
+                "problemLink": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
+                "solutionLink": "https://www.youtube.com/embed/Hr5cWUld4vU?si=IIdL1o4jfjl11ZJX"
+            },
+            {
+                "id": 60,
+                "name": "Serialize And Deserialize Binary Tree",
+                "difficulty": "Hard",
+                "problemLink": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/",
+                "solutionLink": "https://www.youtube.com/embed/u4JAi2JJhI8?si=89PmFpkpU5-2YxZl"
+            }
+        ]
+    },
+    "tries": {
+        "id": 8,
+        "title": "Tries",
+        "prerequisites": [
+            {
+                "title": "Trie",
+                "description": "Advanced Algorithms",
+                "link": "https://neetcode.io/courses/advanced-algorithms/6"
+            }
+        ],
+        "problems": [
+            {
+                "id": 61,
+                "name": "Implement Trie Prefix Tree",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/implement-trie-prefix-tree/",
+                "solutionLink": "https://www.youtube.com/embed/oobqoCJlHA0?si=6kUq68E33dzy0Jkh"
+            },
+            {
+                "id": 62,
+                "name": "Design Add And Search Words Data Structure",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/design-add-and-search-words-data-structure/",
+                "solutionLink": "https://www.youtube.com/embed/BTf05gs_8iU?si=UbAEuAh-3yipKvzi"
+            },
+            {
+                "id": 63,
+                "name": "Word Search II",
+                "difficulty": "Hard",
+                "problemLink": "https://leetcode.com/problems/word-search-ii/",
+                "solutionLink": "https://www.youtube.com/embed/asbcE9mZz_U?si=feARg1d6SuXt6q4Z"
+            }
+        ]
+    },
+    "heap-/-priority-queue": {
+        "id": 9,
+        "title": "Heap / Priority Queue",
+        "prerequisites": [
+            {
+                "title": "Heap Properties",
+                "description": "Data Structures & Algorithms for Beginners",
+                "link": "https://neetcode.io/courses/dsa-for-beginners/23"
+            },
+            {
+                "title": "Push and Pop",
+                "description": "Data Structures & Algorithms for Beginners",
+                "link": "https://neetcode.io/courses/dsa-for-beginners/24"
+            },
+            {
+                "title": "Heapify",
+                "description": "Data Structures & Algorithms for Beginners",
+                "link": "https://neetcode.io/courses/dsa-for-beginners/25"
+            },
+            {
+                "title": "Two Heaps",
+                "description": "Advanced Algorithms",
+                "link": "https://neetcode.io/courses/advanced-algorithms/10"
+            }
+        ],
+        "problems": [
+            {
+                "id": 64,
+                "name": "Kth Largest Element In a Stream",
+                "difficulty": "Easy",
+                "problemLink": "https://leetcode.com/problems/kth-largest-element-in-a-stream/",
+                "solutionLink": "https://www.youtube.com/embed/hOjcdrqMoQ8?si=18SGOLwxVkoYn0Xx"
+            },
+            {
+                "id": 65,
+                "name": "Last Stone Weight",
+                "difficulty": "Easy",
+                "problemLink": "https://leetcode.com/problems/last-stone-weight/",
+                "solutionLink": "https://www.youtube.com/embed/B-QCq79-Vfw?si=XR5ZZI-J54LVyCnz"
+            },
+            {
+                "id": 66,
+                "name": "K Closest Points to Origin",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/k-closest-points-to-origin/",
+                "solutionLink": "https://www.youtube.com/embed/rI2EBUEMfTk?si=DT0PHD9nxAv2H2y5"
+            },
+            {
+                "id": 67,
+                "name": "Kth Largest Element In An Array",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+                "solutionLink": "https://www.youtube.com/embed/XEmy13g1Qxc?si=6QoDQTGVOBeSycKt"
+            },
+            {
+                "id": 68,
+                "name": "Task Scheduler",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/task-scheduler/",
+                "solutionLink": "https://www.youtube.com/embed/s8p8ukTyA2I?si=VTHwBQIr18oTAWD5"
+            },
+            {
+                "id": 69,
+                "name": "Design Twitter",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/design-twitter/",
+                "solutionLink": "https://www.youtube.com/embed/pNichitDD2E?si=PM01MZr6CD1cJeoy"
+            },
+            {
+                "id": 70,
+                "name": "Find Median From Data Stream",
+                "difficulty": "Hard",
+                "problemLink": "https://leetcode.com/problems/find-median-from-data-stream/",
+                "solutionLink": "https://www.youtube.com/embed/itmhHWaHupI?si=gKylfQjelui_GcUn"
+            }
+        ]
+    },
+    "backtracking": {
+        "id": 10,
+        "title": "Backtracking",
+        "prerequisites": [
+            {
+                "title": "Tree Maze",
+                "description": "Data Structures & Algorithms for Beginners",
+                "link": "https://neetcode.io/courses/dsa-for-beginners/22"
+            },
+            {
+                "title": "Subsets",
+                "description": "Advanced Algorithms",
+                "link": "https://neetcode.io/courses/advanced-algorithms/11"
+            },
+            {
+                "title": "Combinations",
+                "description": "Advanced Algorithms",
+                "link": "https://neetcode.io/courses/advanced-algorithms/12"
+            },
+            {
+                "title": "Permutations",
+                "description": "Advanced Algorithms",
+                "link": "https://neetcode.io/courses/advanced-algorithms/13"
+            }
+        ],
+        "problems": [
+            {
+                "id": 71,
+                "name": "Subsets",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/subsets/",
+                "solutionLink": "https://www.youtube.com/embed/REOH22Xwdkk?si=GCQOw26cVF5XGby2"
+            },
+            {
+                "id": 72,
+                "name": "Combination Sum",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/combination-sum/",
+                "solutionLink": "https://www.youtube.com/embed/GBKI9VSKdGg?si=bvyp2__LmGyQhRzp"
+            },
+            {
+                "id": 73,
+                "name": "Permutations",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/permutations/",
+                "solutionLink": "https://www.youtube.com/embed/FZe0UqISmUw?si=F13B49nNU5tS16Mp"
+            },
+            {
+                "id": 74,
+                "name": "Subsets II",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/subsets-ii/",
+                "solutionLink": "https://www.youtube.com/embed/Vn2v6ajA7U0?si=ajkiRrtLCzA1psRB"
+            },
+            {
+                "id": 75,
+                "name": "Combination Sum II",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/combination-sum-ii/",
+                "solutionLink": "https://www.youtube.com/embed/FOyRpNUSFeA?si=JICrrbvTYcJgybsi"
+            },
+            {
+                "id": 76,
+                "name": "Word Search",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/word-search/",
+                "solutionLink": "https://www.youtube.com/embed/pfiQ_PS1g8E?si=Gt-se6HXeroiD7vT"
+            },
+            {
+                "id": 77,
+                "name": "Palindrome Partitioning",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/palindrome-partitioning/",
+                "solutionLink": "https://www.youtube.com/embed/3jvWodd7ht0?si=ONvc3uuPcrSYZ-It"
+            },
+            {
+                "id": 78,
+                "name": "Letter Combinations of a Phone Number",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/",
+                "solutionLink": "https://www.youtube.com/embed/0snEunUacZY?si=Vjw466-pQkLTjWn5"
+            },
+            {
+                "id": 79,
+                "name": "N Queens",
+                "difficulty": "Hard",
+                "problemLink": "https://leetcode.com/problems/n-queens/",
+                "solutionLink": "https://www.youtube.com/embed/Ph95IHmRp5M?si=AkQJK9_9T0RRmRc_"
+            }
+        ]
+    },
+    "intervals": {
+        "id": 11,
+        "title": "Intervals",
+        "prerequisites": [
+        ],
+        "problems": [
+            {
+                "id": 80,
+                "name": "Insert Interval",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/insert-interval/",
+                "solutionLink": "https://www.youtube.com/embed/A8NUOmlwOlM?si=-i5-5DEDrDhFUCty"
+            },
+            {
+                "id": 81,
+                "name": "Merge Intervals",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/merge-intervals/",
+                "solutionLink": "https://www.youtube.com/embed/44H3cEC2fFM?si=CzX_Lk8duTdjhEM_"
+            },
+            {
+                "id": 82,
+                "name": "Non Overlapping Intervals",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/non-overlapping-intervals/",
+                "solutionLink": "https://www.youtube.com/embed/nONCGxWoUfM?si=yGzos2MeJTWlwk"
+            },
+            {
+                "id": 83,
+                "name": "Meeting Rooms",
+                "difficulty": "Easy",
+                "problemLink": "https://leetcode.com/problems/meeting-rooms/",
+                "solutionLink": "https://www.youtube.com/embed/PaJxqZVPhbg?si=crmFKpWWMkNR-MSO"
+            },
+            {
+                "id": 84,
+                "name": "Meeting Rooms II",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/meeting-rooms-ii/",
+                "solutionLink": "https://www.youtube.com/embed/FdzJmTCVyJU?si=fYLf8eN3RNynmjwD"
+            },
+            {
+                "id": 85,
+                "name": "Minimum Interval to Include Each Query",
+                "difficulty": "Hard",
+                "problemLink": "https://leetcode.com/problems/minimum-interval-to-include-each-query/",
+                "solutionLink": "https://www.youtube.com/embed/5hQ5WWW5awQ?si=AIUHbMejLXAG-HzJ"
+            }
+        ]
+    },
+    "greedy": {
+        "id": 12,
+        "title": "Greedy",
+        "prerequisites": [
+            {
+                "title": "Kadane's Algorithm",
+                "description": "Advanced Algorithms",
+                "link": "https://neetcode.io/courses/advanced-algorithms/0"
+            }
+        ],
+        "problems": [
+            {
+                "id": 86,
+                "name": "Maximum Subarray",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/maximum-subarray",
+                "solutionLink": "https://www.youtube.com/embed/5WZl3MMT0Eg?si=OIxTYUqSSuzh6Ton"
+            },
+            {
+                "id": 87,
+                "name": "Jump Game",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/jump-game/",
+                "solutionLink": "https://www.youtube.com/embed/Yan0cv2cLy8?si=Qxpy6IOAHAdpHP1m"
+            },
+            {
+                "id": 88,
+                "name": "Jump Game II",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/jump-game-ii",
+                "solutionLink": "https://www.youtube.com/embed/dJ7sWiOoK7g?si=KhSzmW1ik1HSTMFp"
+            },
+            {
+                "id": 89,
+                "name": "Gas Station",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/gas-station",
+                "solutionLink": "https://www.youtube.com/embed/lJwbPZGo05A?si=VkT-BYaCtEiHBPz0"
+            },
+            {
+                "id": 90,
+                "name": "Hand of Straights",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/hand-of-straights/",
+                "solutionLink": "https://www.youtube.com/embed/amnrMCVd2YI?si=ZIu977R5Chm456pK"
+            },
+            {
+                "id": 91,
+                "name": "Merge Triplets to Form Target Triplet",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/merge-triplets-to-form-target",
+                "solutionLink": "https://www.youtube.com/embed/kShkQLQZ9K4?si=fH87ta8V-z_OOETt"
+            },
+            {
+                "id": 92,
+                "name": "Partition Labels",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/partition-labels",
+                "solutionLink": "https://www.youtube.com/embed/B7m8UmZE-vw?si=acFDjKIeLREOcs2i"
+            },
+            {
+                "id": 93,
+                "name": "Valid Parenthesis String",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/valid-parenthesis-string",
+                "solutionLink": "https://www.youtube.com/embed/QhPdNS143Qg?si=9nY6gRQKE4adBNDw"
+            }
+        ]
+    },
+    "advanced-graphs": {
+        "id": 13,
+        "title": "Advanced Graphs",
+        "prerequisites": [
+            {
+                "title": "Dijkstra's",
+                "description": "Advanced Algorithms",
+                "link": "https://neetcode.io/courses/advanced-algorithms/14"
+            },
+            {
+                "title": "Prim's",
+                "description": "Advanced Algorithms",
+                "link": "https://neetcode.io/courses/advanced-algorithms/15"
+            },
+            {
+                "title": "Kruskal's",
+                "description": "Advanced Algorithms",
+                "link": "https://neetcode.io/courses/advanced-algorithms/16"
+            },
+            {
+                "title": "Topological Sort",
+                "description": "Advanced Algorithms",
+                "link": "https://neetcode.io/courses/advanced-algorithms/17"
+            }
+        ],
+        "problems": [
+            {
+                "id": 94,
+                "name": "Reconstruct Itinerary",
+                "difficulty": "Hard",
+                "problemLink": "https://neetcode.io/problems/reconstruct-flight-path",
+                "solutionLink": "https://www.youtube.com/embed/ZyB_gQ8vqGA?si=GfaFdlnIgIA3PayT"
+            },
+            {
+                "id": 95,
+                "name": "Min Cost to Connect All Points",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/min-cost-to-connect-points",
+                "solutionLink": "https://www.youtube.com/embed/f7JOBJIC-NA?si=LZlVYHHNi8DCvtT6"
+            },
+            {
+                "id": 96,
+                "name": "Network Delay Time",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/network-delay-time",
+                "solutionLink": "https://www.youtube.com/embed/EaphyqKU4PQ?si=bBq-w0cU3ujcjh0T"
+            },
+            {
+                "id": 97,
+                "name": "Swim In Rising Water",
+                "difficulty": "Hard",
+                "problemLink": "https://neetcode.io/problems/gas-station",
+                "solutionLink": "https://www.youtube.com/embed/lJwbPZGo05A?si=VkT-BYaCtEiHBPz0"
+            },
+            {
+                "id": 98,
+                "name": "Alien Dictionary",
+                "difficulty": "Hard",
+                "problemLink": "https://neetcode.io/problems/foreign-dictionary",
+                "solutionLink": "https://www.youtube.com/embed/6kTZYvNNyps?si=UsuX-xTZtn_DKWpm"
+            },
+            {
+                "id": 99,
+                "name": "Cheapest Flights Within K Stops",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/cheapest-flight-path",
+                "solutionLink": "https://www.youtube.com/embed/5eIK3zUdYmE?si=cSFaE9tY7BF_zk6G"
+            }
+        ]
+    },
+    "graphs": {
+        "id": 14,
+        "title": "Graphs",
+        "prerequisites": [
+            {
+                "title": "Intro to Graphs",
+                "description": "Data Structures & Algorithms for Beginners",
+                "link": "https://neetcode.io/courses/dsa-for-beginners/28"
+            },
+            {
+                "title": "Matrix DFS",
+                "description": "Data Structures & Algorithms for Beginners",
+                "link": "https://neetcode.io/courses/dsa-for-beginners/29"
+            },
+            {
+                "title": "Matrix BFS",
+                "description": "Data Structures & Algorithms for Beginners",
+                "link": "https://neetcode.io/courses/dsa-for-beginners/30"
+            },
+            {
+                "title": "Adjacency List",
+                "description": "Data Structures & Algorithms for Beginners",
+                "link": "https://neetcode.io/courses/dsa-for-beginners/31"
+            }
+        ],
+        "problems": [
+            {
+                "id": 100,
+                "name": "Number of Islands",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/count-number-of-islands",
+                "solutionLink": "https://www.youtube.com/embed/pV2kpPD66nE?si=sVJFQNGwo5rHC3K1"
+            },
+            {
+                "id": 101,
+                "name": "Max Area of Island",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/solutions/max-area-of-island",
+                "solutionLink": "https://www.youtube.com/embed/iJGr1OtmH0c?si=rJbMsnRbBrLzl31D"
+            },
+            {
+                "id": 102,
+                "name": "Clone Graph",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/clone-graph",
+                "solutionLink": "https://www.youtube.com/embed/mQeF6bN8hMk?si=fg1mPrZjXE4K7aqw"
+            },
+            {
+                "id": 103,
+                "name": "Walls And Gates",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/islands-and-treasure",
+                "solutionLink": "https://www.youtube.com/embed/e69C6xhiSQE?si=SX1qoKZjjZFQTElP"
+            },
+            {
+                "id": 104,
+                "name": "Rotting Oranges",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/rotting-fruit",
+                "solutionLink": "https://www.youtube.com/embed/y704fEOx0s0?si=bKExUjPXTZVh2x5s"
+            },
+            {
+                "id": 105,
+                "name": "Pacific Atlantic Water Flow",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/pacific-atlantic-water-flow",
+                "solutionLink": "https://www.youtube.com/embed/s-VkcjHqkGI?si=akm1gfRofBH_cWxL"
+            },
+            {
+                "id": 106,
+                "name": "Surrounded Regions",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/surrounded-regions",
+                "solutionLink": "https://www.youtube.com/embed/9z2BunfoZ5Y?si=2UYuK4uv7vffe0F_"
+            },
+            {
+                "id": 107,
+                "name": "Course Schedule",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/course-schedule",
+                "solutionLink": "https://www.youtube.com/embed/EgI5nU9etnU?si=iJ2SNKGps90TWPMT"
+            },
+            {
+                "id": 108,
+                "name": "Course Schedule II",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/course-schedule-ii",
+                "solutionLink": "https://www.youtube.com/embed/Akt3glAwyfY?si=_yH72V8gcIcqVl7X"
+            },
+            {
+                "id": 109,
+                "name": "Graph Valid Tree",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/valid-tree",
+                "solutionLink": "https://www.youtube.com/embed/bXsUuownnoQ?si=USCKhtCMN8XJsYeq"
+            },
+            {
+                "id": 110,
+                "name": "Number of Connected Components In An Undirected Graph",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/number-ofLink-connected-components-in-an-undirected-graph/",
+                "solutionLink": "https://www.youtube.com/embed/8f1XPm4WOUc?si=WqysBAumN8Rfvf21"
+            },
+            {
+                "id": 111,
+                "name": "Redundant Connection",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/redundant-connection",
+                "solutionLink": "https://www.youtube.com/embed/FXWRE67PLL0?si=UFMIHdFeuTKy7eJn"
+            },
+            {
+                "id": 112,
+                "name": "Word Ladder",
+                "difficulty": "Hard",
+                "problemLink": "https://neetcode.io/problems/word-ladder",
+                "solutionLink": "https://www.youtube.com/embed/h9iTnkgv05E?si=hH8KRd3ISwpZwI7N"
+            }
+        ]
+    },
+    "1-d-dynamic-programming": {
+        "id": 15,
+        "title": "1-D Dynamic Programming",
+        "prerequisites": [
+            {
+                "title": "1-Dimension DP",
+                "description": "Data Structures & Algorithms for Beginners",
+                "link": "https://neetcode.io/courses/dsa-for-beginners/32"
+            },
+            {
+                "title": "Palindromes",
+                "description": "Advanced Algorithms",
+                "link": "https://neetcode.io/courses/advanced-algorithms/21"
+            }
+        ],
+        "problems": [
+            {
+                "id": 113,
+                "name": "Climbing Stairs",
+                "difficulty": "Easy",
+                "problemLink": "https://neetcode.io/problems/climbing-stairs",
+                "solutionLink": "https://www.youtube.com/embed/Y0lT9Fck7qI?si=Eb4ChszQGDOy-brQ"
+            },
+            {
+                "id": 114,
+                "name": "Min Cost Climbing Stairs",
+                "difficulty": "Easy",
+                "problemLink": "https://neetcode.io/problems/min-cost-climbing-stairs",
+                "solutionLink": "https://www.youtube.com/embed/ktmzAZWkEZ0?si=VgJhXMDsoL-5qdD_"
+            },
+            {
+                "id": 115,
+                "name": "House Robber",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/clone-graph",
+                "solutionLink": "https://www.youtube.com/embed/73r3KWiEvyk?si=4pMrxFr3TIUTncHk"
+            },
+            {
+                "id": 116,
+                "name": "House Robber II",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/house-robber-ii",
+                "solutionLink": "https://www.youtube.com/embed/rWAJCfYYOvM?si=sLXRcCwP42_N0wby"
+            },
+            {
+                "id": 117,
+                "name": "Longest Palindromic Substring",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/longest-palindromic-substring",
+                "solutionLink": "https://www.youtube.com/embed/XYQecbcd6_c?si=tmNNYSjEaBdD1gJx"
+            },
+            {
+                "id": 118,
+                "name": "Palindromic Substrings",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/palindromic-substrings",
+                "solutionLink": "https://www.youtube.com/embed/4RACzI5-du8?si=geExaPJTAp2-o-Z8"
+            },
+            {
+                "id": 119,
+                "name": "Decode Ways",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/decode-ways",
+                "solutionLink": "https://www.youtube.com/embed/6aEyTjOwlJU?si=orA9KOewOzg7b0ym"
+            },
+            {
+                "id": 120,
+                "name": "Coin Change",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/coin-change/",
+                "solutionLink": "https://www.youtube.com/embed/H9bfqozjoqs?si=bdhfQ-jym0Ow3zzh"
+            },
+            {
+                "id": 121,
+                "name": "Maximum Product Subarray",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/maximum-product-subarray",
+                "solutionLink": "https://www.youtube.com/embed/lXVy6YWFcRM?si=0RPosl0DsfUgpwE6"
+            },
+            {
+                "id": 122,
+                "name": "Word Break",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/word-break",
+                "solutionLink": "https://www.youtube.com/embed/Sx9NNgInc3A?si=dbBRcvzZYko2wC4u"
+            },
+            {
+                "id": 123,
+                "name": "Longest Increasing Subsequence",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/longest-increasing-subsequence",
+                "solutionLink": "https://www.youtube.com/embed/cjWnW0hdF1Y?si=hWsnmm27_zSD8any"
+            },
+            {
+                "id": 124,
+                "name": "Partition Equal Subset Sum ",
+                "difficulty": "Hard",
+                "problemLink": "https://neetcode.io/problems/partition-equal-subset-sum",
+                "solutionLink": "https://www.youtube.com/embed/IsvocB5BJhw?si=65k1O9IejebuxoKp"
+            }
+        ]
+    },
+    "2-d-dynamic-programming": {
+        "id": 16,
+        "title": "2-D Dynamic Programming",
+        "prerequisites": [
+            {
+                "title": "2-Dimension DP",
+                "description": "Data Structures & Algorithms for Beginners",
+                "link": "https://neetcode.io/courses/dsa-for-beginners/33"
+            },
+            {
+                "title": "0 / 1 Knapsack",
+                "description": "Advanced Algorithms",
+                "link": "https://neetcode.io/courses/advanced-algorithms/18"
+            },
+            {
+                "title": "Unbounded Knapsack",
+                "description": "Advanced Algorithms",
+                "link": "https://neetcode.io/courses/advanced-algorithms/19"
+            },
+            {
+                "title": "LCS",
+                "description": "Advanced Algorithms",
+                "link": "https://neetcode.io/courses/advanced-algorithms/20"
+            }
+        ],
+        "problems": [
+            {
+                "id": 125,
+                "name": "Unique Paths",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/count-paths",
+                "solutionLink": "https://www.youtube.com/embed/IlEsdxuD4lY?si=qZUnSH_0wKTlGiWn"
+            },
+            {
+                "id": 126,
+                "name": "Longest Common Subsequence",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/longest-common-subsequence/",
+                "solutionLink": "https://www.youtube.com/embed/Ua0GhsJSlWM?si=IT3-lj5UnB3t_s9J"
+            },
+            {
+                "id": 127,
+                "name": "Best Time to Buy And Sell Stock With Cooldown",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/",
+                "solutionLink": "https://www.youtube.com/embed/I7j0F7AHpb8?si=4AVSYzCkgHQzPhqE"
+            },
+            {
+                "id": 128,
+                "name": "Coin Change II",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/coin-change-ii/",
+                "solutionLink": "https://www.youtube.com/embed/Mjy4hd2xgrs?si=TIl55gXAQwKMdbeC"
+            },
+            {
+                "id": 129,
+                "name": "Target Sum",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/target-sum/",
+                "solutionLink": "https://www.youtube.com/embed/g0npyaQtAQM?si=nhFU0uMBhPZeiagp"
+            },
+            {
+                "id": 130,
+                "name": "Interleaving String",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/interleaving-string/",
+                "solutionLink": "https://www.youtube.com/embed/3Rw3p9LrgvE?si=vSs_3xsDCNFfvuFl"
+            },
+            {
+                "id": 131,
+                "name": "Longest Increasing Path In a Matrix ",
+                "difficulty": "Hard",
+                "problemLink": "https://neetcode.io/problems/longest-increasing-path-in-matrix",
+                "solutionLink": "https://www.youtube.com/embed/6wCc_nd-GiEc?si=V-h9_utzhcFfUy3Q"
+            },
+            {
+                "id": 132,
+                "name": "Distinct Subsequences",
+                "difficulty": "Hard",
+                "problemLink": "https://neetcode.io/problems/count-subsequences",
+                "solutionLink": "https://www.youtube.com/embed/-RDzMJ33nx8?si=T7zi5v0wBdl9KAsi"
+            },
+            {
+                "id": 133,
+                "name": "Edit Distance",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/edit-distance/",
+                "solutionLink": "https://www.youtube.com/embed/XYi2-LPrwm4?si=f0a_zsn0Qor8jLBy"
+            },
+            {
+                "id": 134,
+                "name": "Burst Balloons",
+                "difficulty": "Hard",
+                "problemLink": "https://leetcode.com/problems/burst-balloons/",
+                "solutionLink": "https://www.youtube.com/embed/VFskby7lUbw?si=UbeXmpGXvpKNbuv8"
+            },
+            {
+                "id": 135,
+                "name": "Regular Expression Matching ",
+                "difficulty": "Hard",
+                "problemLink": "https://neetcode.io/problems/regular-expression-matching",
+                "solutionLink": "https://www.youtube.com/embed/HAA8mgxlov8?si=pOIrZLrqbL0QBqDT"
+            }
+        ]
+    },
+    "bit-manipulation": {
+        "id": 17,
+        "title": "Bit Manipulation",
+        "prerequisites": [
+            {
+                "title": "Bit Operations",
+                "description": "Data Structures & Algorithms for Beginners",
+                "link": "https://neetcode.io/courses/dsa-for-beginners/34"
+            }
+        ],
+        "problems": [
+            {
+                "id": 136,
+                "name": "Single Number",
+                "difficulty": "Easy",
+                "problemLink": "https://neetcode.io/problems/single-number",
+                "solutionLink": "https://www.youtube.com/embed/qMPX1AOa83k?si=hw3HVv-HymuNBGm2"
+            },
+            {
+                "id": 137,
+                "name": "Number of 1 Bits",
+                "difficulty": "Easy",
+                "problemLink": "https://neetcode.io/problems/number-of-one-bits",
+                "solutionLink": "https://www.youtube.com/embed/5Km3utixwZs?si=Y749uk9t0GCrb0gV"
+            },
+            {
+                "id": 138,
+                "name": "Counting Bits",
+                "difficulty": "Easy",
+                "problemLink": "https://neetcode.io/problems/counting-bits",
+                "solutionLink": "https://www.youtube.com/embed/RyBM56RIWrM?si=5GsMJsGDhqOyJHe_"
+            },
+            {
+                "id": 139,
+                "name": "Reverse Bits",
+                "difficulty": "Easy",
+                "problemLink": "https://neetcode.io/problems/reverse-bits",
+                "solutionLink": "https://www.youtube.com/embed/UcoN6UjAI64?si=-0Lu5U4Qgp5MRAKr"
+            },
+            {
+                "id": 140,
+                "name": "Missing Number",
+                "difficulty": "Easy",
+                "problemLink": "https://neetcode.io/problems/missing-number",
+                "solutionLink": "https://www.youtube.com/embed/WnPLSRLSANE?si=6ObKW-JqdSnk-XRF"
+            },
+            {
+                "id": 141,
+                "name": "Sum of Two Integers",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/sum-of-two-integers",
+                "solutionLink": "https://www.youtube.com/embed/gVUrDV4tZfY?si=8NAn4Shk2NlcpyBv"
+            },
+            {
+                "id": 142,
+                "name": "Reverse Integer",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/reverse-integer",
+                "solutionLink": "https://www.youtube.com/embed/HAgLH58IgJQ?si=slDktw9gTCNUQbeT"
+            }
+        ]
+    },
+    "math-&-eometry": {
+        "id": 18,
+        "title": "Math & Eometry",
+        "prerequisites": [
+        ],
+        "problems": [
+            {
+                "id": 143,
+                "name": "Rotate Image",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/rotate-matrix",
+                "solutionLink": "https://www.youtube.com/embed/fMSJSS7eO1w?si=BVB9ijRYBsLidWjl"
+            },
+            {
+                "id": 144,
+                "name": "Spiral Matrix",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/spiral-matrix/",
+                "solutionLink": "https://www.youtube.com/embed/BJnMZNwUk1M?si=sajQDwkTiMrVkme7"
+            },
+            {
+                "id": 145,
+                "name": "Set Matrix Zeroes",
+                "difficulty": "Medium",
+                "problemLink": "https://leetcode.com/problems/set-matrix-zeroes/",
+                "solutionLink": "https://www.youtube.com/embed/T41rL0L3Pnw?si=tXeuTlgnyFmm7d3Z"
+            },
+            {
+                "id": 146,
+                "name": "Happy Number",
+                "difficulty": "Easy",
+                "problemLink": "https://neetcode.io/problems/non-cyclical-number",
+                "solutionLink": "https://www.youtube.com/embed/ljz85bxOYJ0?si=hGRHwRCANl2kj1Aa"
+            },
+            {
+                "id": 147,
+                "name": "Plus One",
+                "difficulty": "Easy",
+                "problemLink": "https://neetcode.io/problems/plus-one",
+                "solutionLink": "https://www.youtube.com/embed/jIaA8boiG1s?si=1q0JhpNLSxCUiO-Y"
+            },
+            {
+                "id": 148,
+                "name": "Pow(x, n)",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/pow-x-n",
+                "solutionLink": "https://www.youtube.com/embed/g9YQyYi4IQQ?si=2DYUHJK9Y4bpN0Zh"
+            },
+            {
+                "id": 149,
+                "name": "Multiply Strings",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/multiply-strings",
+                "solutionLink": "https://www.youtube.com/embed/1vZswirL8Y8?si=ffwxWrG6nnXCAmky"
+            },
+            {
+                "id": 150,
+                "name": "Detect Squares",
+                "difficulty": "Medium",
+                "problemLink": "https://neetcode.io/problems/count-squares",
+                "solutionLink": "https://www.youtube.com/embed/bahebearrDc?si=Bfh3LD4R1j78A7YS"
+            }
+        ]
+    }
+    
+}

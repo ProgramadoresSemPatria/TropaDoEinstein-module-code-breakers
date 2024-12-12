@@ -9,15 +9,27 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/d3": "^7.4.3",
-    "d3": "^7.9.0",
+    "@emotion/cache": "^11.13.5",
+    "@emotion/react": "^11.13.5",
+    "@emotion/styled": "^11.13.5",
+    "@hookform/resolvers": "^3.9.1",
+    "@mui/icons-material": "^6.1.8",
+    "@mui/material": "^6.1.8",
+    "@mui/material-nextjs": "^6.1.7",
+    "cross-spawn": "^7.0.6",
+    "dagre": "^0.8.5",
+    "firebase": "^11.0.2",
     "install": "^0.13.0",
-    "next": "15.0.3",
+    "next": "^14.2.18",
     "npm": "^10.9.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.53.2",
+    "reactflow": "^11.11.4",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@types/dagre": "^0.7.52",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
