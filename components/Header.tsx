@@ -23,9 +23,18 @@ export default function Header() {
                             height={110}
                         />
                     </Link>
-                    <ul className='hidden md:block'>
-                        <li className='px-6 py-[6px] bg-background rounded-2xl cursor-pointer'>
+                    <ul className='hidden md:flex gap-8 items-center'>
+                        <li className='px-6 py-[6px] hover:bg-background transition ease-in-out duration-300 rounded-2xl cursor-pointer'>
+                            <a href="https://neetcode.io/courses" target="_blank" rel="noopener noreferrer">Courses</a>
+                        </li>
+                        <li className='px-6 py-[6px] hover:bg-background transition ease-in-out duration-300 rounded-2xl cursor-pointer'>
+                            <a href="https://neetcode.io/practice" target="_blank" rel="noopener noreferrer">Practice</a>
+                        </li>
+                        <li className='px-6 py-[6px] hover:bg-background bg-background transition ease-in-out duration-300 rounded-2xl cursor-pointer'>
                             <Link href="/">Roadmap</Link>
+                        </li>
+                        <li className='px-6 py-[6px] hover:bg-background transition ease-in-out duration-300 rounded-2xl cursor-pointer'>
+                            <a href="https://neetcode.io/newsletter" target="_blank" rel="noopener noreferrer">Newsletter</a>
                         </li>
                     </ul>
                 </div>
