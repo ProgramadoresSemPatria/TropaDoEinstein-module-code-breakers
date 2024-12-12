@@ -3,12 +3,13 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Box, TextField, Button, Container, Stack } from "@mui/material";
+import { Box, Button, Container, Stack } from "@mui/material";
 import { registerSchema, RegisterFormData } from "../schemas/registerSchema";
 import SignUp from "@/firebase/auth/signUp";
 import { useRouter } from "next/navigation";
 import { ref, set } from "firebase/database";
 import { database } from "@/firebase/firebaseDBConfig";
+import CustomTextField from "@/components/CustomTextField";
 
 export default function RegisterPage() {
   const {
@@ -62,52 +63,32 @@ export default function RegisterPage() {
         <h1 className="text-center pb-8 text-2xl">Register</h1>
         <form onSubmit={handleSubmit(onSubmit)} noValidate>
           <Stack spacing={3}>
-            <TextField
+            
+            <CustomTextField
+              type="text"
               label="Name"
-              variant="outlined"
-              {...register("name")}
+              name="name"
+              register={register("name")}
               error={!!errors.name}
               helperText={errors.name?.message}
-              fullWidth
-              sx={{ "& .MuiInputBase-root": { color: "white" } }}
-              InputLabelProps={{
-                style: { color: "white" },
-              }}
             />
-
-            <TextField
+            <CustomTextField
+              type="email"  
               label="Email"
-              variant="outlined"
-              {...register("email")}
+              name="email"
+              register={register("email")} 
               error={!!errors.email}
-              helperText={errors.email?.message}
-              fullWidth
-              sx={{ "& .MuiInputBase-root": { color: "white" } }}
-              InputLabelProps={{
-                style: { color: "white" },
-              }}
+              helperText={errors.email?.message} 
             />
-
-            <TextField
-              label="Password"
+            <CustomTextField
               type="password"
-              variant="outlined"
-              {...register("password")}
-              error={!!errors.password}
-              helperText={errors.password?.message}
-              fullWidth
-              sx={{ "& .MuiInputBase-root": { color: "white" } }}
-              InputLabelProps={{
-                style: { color: "white" },
-              }}
+              label="Password"
+              name="password"
+              register={register("password")} 
+              error={!!errors.password} 
+              helperText={errors.password?.message} 
             />
-            <p>
-              Already have an account?{" "}
-              <a className="text-blue-500" href="/login">
-                Click here
-              </a>{" "}
-              to sign in.
-            </p>
+  
             <p className="p-2 text-red-500">{errorMessage}</p>
 
             <Button
@@ -122,6 +103,14 @@ export default function RegisterPage() {
             >
               Register
             </Button>
+
+            <p className="text-center">
+              Already have an account?{" "}
+              <a className="text-blue-500" href="/login">
+                Click here
+              </a>{" "}
+              to sign in.
+            </p>
           </Stack>
         </form>
       </Box>
