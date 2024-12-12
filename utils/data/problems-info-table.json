@@ -6,22 +6,22 @@
             {
                 "title": "Dynamic Arrays",
                 "description": "Data Structures & Algorithms for Beginners",
-                "link": ""
+                "link": "https://neetcode.io/courses/dsa-for-beginners/3"
             },
             {
                 "title": "Hash Usage",
                 "description": "Data Structures & Algorithms for Beginners",
-                "link": ""
+                "link": "https://neetcode.io/courses/dsa-for-beginners/26"
             },
             {
                 "title": "Hash Implementation",
                 "description": "Data Structures & Algorithms for Beginners",
-                "link": ""
+                "link": "https://neetcode.io/courses/dsa-for-beginners/27"
             },
             {
                 "title": "Prefix Sums",
                 "description": "Advanced Algorithms",
-                "link": ""
+                "link": "https://neetcode.io/courses/advanced-algorithms/4"
             }
         ],
         "problems": [
@@ -97,7 +97,7 @@
             {
                 "title": "Two Pointers",
                 "description": "Advanced Algorithms",
-                "link": ""
+                "link": "https://neetcode.io/courses/advanced-algorithms/3"
             }
         ],
         "problems": [
@@ -145,7 +145,7 @@
             {
                 "title": "Stacks",
                 "description": "Data Structures & Algorithms for Beginners",
-                "link": ""
+                "link": "https://neetcode.io/courses/dsa-for-beginners/4"
             }
         ],
         "problems": [
@@ -207,12 +207,12 @@
             {
                 "title": "Search Array",
                 "description": "Data Structures & Algorithms for Beginners",
-                "link": ""
+                "link": "https://neetcode.io/courses/dsa-for-beginners/14"
             },
             {
                 "title": "Search Range",
                 "description": "Data Structures & Algorithms for Beginners",
-                "link": ""
+                "link": "https://neetcode.io/courses/dsa-for-beginners/15"
             }
         ],
         "problems": [
@@ -274,12 +274,12 @@
             {
                 "title": "Sliding Window Fixed Size",
                 "description": "Advanced Algorithms",
-                "link": ""
+                "link": "https://neetcode.io/courses/advanced-algorithms/1"
             },
             {
                 "title": "Sliding Window Variable Size",
                 "description": "Advanced Algorithms",
-                "link": ""
+                "link": "https://neetcode.io/courses/advanced-algorithms/2"
             }
         ],
         "problems": [
@@ -334,17 +334,17 @@
             {
                 "title": "Singly Linked Lists",
                 "description": "Data Structures & Algorithms for Beginners",
-                "link": ""
+                "link": "https://neetcode.io/courses/dsa-for-beginners/5"
             },
             {
                 "title": "Doubly Linked Lists",
                 "description": "Data Structures & Algorithms for Beginners",
-                "link": ""
+                "link": "https://neetcode.io/courses/dsa-for-beginners/6"
             },
             {
                 "title": "Fast and Slow Pointers",
                 "description": "Advanced Algorithms",
-                "link": ""
+                "link": "https://neetcode.io/courses/advanced-algorithms/5"
             }
         ],
         "problems": [
@@ -434,27 +434,27 @@
             {
                 "title": "BST Insert and Remove",
                 "description": "Data Structures & Algorithms for Beginners",
-                "link": ""
+                "link": "https://neetcode.io/courses/dsa-for-beginners/18"
             },
             {
                 "title": "Depth-First Search",
                 "description": "Data Structures & Algorithms for Beginners",
-                "link": ""
+                "link": "https://neetcode.io/courses/dsa-for-beginners/19"
             },
             {
                 "title": "Breadth-First Search",
                 "description": "Data Structures & Algorithms for Beginners",
-                "link": ""
+                "link": "https://neetcode.io/courses/dsa-for-beginners/20"
             },
             {
                 "title": "BST Sets and Maps",
                 "description": "Data Structures & Algorithms for Beginners",
-                "link": ""
+                "link": "https://neetcode.io/courses/dsa-for-beginners/21"
             },
             {
                 "title": "Iterative DFS",
                 "description": "Advanced Algorithms",
-                "link": ""
+                "link": "https://neetcode.io/courses/advanced-algorithms/9"
             }
         ],
         "problems": [
@@ -572,7 +572,7 @@
             {
                 "title": "Trie",
                 "description": "Advanced Algorithms",
-                "link": ""
+                "link": "https://neetcode.io/courses/advanced-algorithms/6"
             }
         ],
         "problems": [
@@ -606,22 +606,22 @@
             {
                 "title": "Heap Properties",
                 "description": "Data Structures & Algorithms for Beginners",
-                "link": ""
+                "link": "https://neetcode.io/courses/dsa-for-beginners/23"
             },
             {
                 "title": "Push and Pop",
                 "description": "Data Structures & Algorithms for Beginners",
-                "link": ""
+                "link": "https://neetcode.io/courses/dsa-for-beginners/24"
             },
             {
                 "title": "Heapify",
                 "description": "Data Structures & Algorithms for Beginners",
-                "link": ""
+                "link": "https://neetcode.io/courses/dsa-for-beginners/25"
             },
             {
                 "title": "Two Heaps",
                 "description": "Advanced Algorithms",
-                "link": ""
+                "link": "https://neetcode.io/courses/advanced-algorithms/10"
             }
         ],
         "problems": [
@@ -683,22 +683,22 @@
             {
                 "title": "Tree Maze",
                 "description": "Data Structures & Algorithms for Beginners",
-                "link": ""
+                "link": "https://neetcode.io/courses/dsa-for-beginners/22"
             },
             {
                 "title": "Subsets",
                 "description": "Advanced Algorithms",
-                "link": ""
+                "link": "https://neetcode.io/courses/advanced-algorithms/11"
             },
             {
                 "title": "Combinations",
                 "description": "Advanced Algorithms",
-                "link": ""
+                "link": "https://neetcode.io/courses/advanced-algorithms/12"
             },
             {
                 "title": "Permutations",
                 "description": "Advanced Algorithms",
-                "link": ""
+                "link": "https://neetcode.io/courses/advanced-algorithms/13"
             }
         ],
         "problems": [
@@ -824,7 +824,7 @@
             {
                 "title": "Kadane's Algorithm",
                 "description": "Advanced Algorithms",
-                "link": ""
+                "link": "https://neetcode.io/courses/advanced-algorithms/0"
             }
         ],
         "problems": [
@@ -893,22 +893,22 @@
             {
                 "title": "Dijkstra's",
                 "description": "Advanced Algorithms",
-                "link": ""
+                "link": "https://neetcode.io/courses/advanced-algorithms/14"
             },
             {
                 "title": "Prim's",
                 "description": "Advanced Algorithms",
-                "link": ""
+                "link": "https://neetcode.io/courses/advanced-algorithms/15"
             },
             {
                 "title": "Kruskal's",
                 "description": "Advanced Algorithms",
-                "link": ""
+                "link": "https://neetcode.io/courses/advanced-algorithms/16"
             },
             {
                 "title": "Topological Sort",
                 "description": "Advanced Algorithms",
-                "link": ""
+                "link": "https://neetcode.io/courses/advanced-algorithms/17"
             }
         ],
         "problems": [
@@ -963,22 +963,22 @@
             {
                 "title": "Intro to Graphs",
                 "description": "Data Structures & Algorithms for Beginners",
-                "link": ""
+                "link": "https://neetcode.io/courses/dsa-for-beginners/28"
             },
             {
                 "title": "Matrix DFS",
                 "description": "Data Structures & Algorithms for Beginners",
-                "link": ""
+                "link": "https://neetcode.io/courses/dsa-for-beginners/29"
             },
             {
                 "title": "Matrix BFS",
                 "description": "Data Structures & Algorithms for Beginners",
-                "link": ""
+                "link": "https://neetcode.io/courses/dsa-for-beginners/30"
             },
             {
                 "title": "Adjacency List",
                 "description": "Data Structures & Algorithms for Beginners",
-                "link": ""
+                "link": "https://neetcode.io/courses/dsa-for-beginners/31"
             }
         ],
         "problems": [
@@ -1082,12 +1082,12 @@
             {
                 "title": "1-Dimension DP",
                 "description": "Data Structures & Algorithms for Beginners",
-                "link": ""
+                "link": "https://neetcode.io/courses/dsa-for-beginners/32"
             },
             {
                 "title": "Palindromes",
                 "description": "Advanced Algorithms",
-                "link": ""
+                "link": "https://neetcode.io/courses/advanced-algorithms/21"
             }
         ],
         "problems": [
@@ -1184,22 +1184,22 @@
             {
                 "title": "2-Dimension DP",
                 "description": "Data Structures & Algorithms for Beginners",
-                "link": ""
+                "link": "https://neetcode.io/courses/dsa-for-beginners/33"
             },
             {
                 "title": "0 / 1 Knapsack",
                 "description": "Advanced Algorithms",
-                "link": ""
+                "link": "https://neetcode.io/courses/advanced-algorithms/18"
             },
             {
                 "title": "Unbounded Knapsack",
                 "description": "Advanced Algorithms",
-                "link": ""
+                "link": "https://neetcode.io/courses/advanced-algorithms/19"
             },
             {
                 "title": "LCS",
                 "description": "Advanced Algorithms",
-                "link": ""
+                "link": "https://neetcode.io/courses/advanced-algorithms/20"
             }
         ],
         "problems": [
@@ -1289,7 +1289,7 @@
             {
                 "title": "Bit Operations",
                 "description": "Data Structures & Algorithms for Beginners",
-                "link": ""
+                "link": "https://neetcode.io/courses/dsa-for-beginners/34"
             }
         ],
         "problems": [
