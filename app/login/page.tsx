@@ -4,9 +4,10 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { loginSchema, LoginFormData } from "../schemas/loginSchema";
-import { Box, TextField, Button, Container, Stack } from "@mui/material";
+import { Box, Button, Container, Stack } from "@mui/material";
 import SignIn from "@/firebase/auth/signIn";
 import { useRouter } from "next/navigation";
+import CustomTextField from "@/components/CustomTextField";
 
 export default function LoginPage() {
   const {
@@ -64,42 +65,24 @@ export default function LoginPage() {
           <h1 className="text-center pb-8 text-2xl">Hello! Welcome back.</h1>
           <form onSubmit={handleSubmit(onSubmit)} noValidate>
             <Stack spacing={3}>
-              <TextField
+
+              <CustomTextField
+                type="email"
                 label="Email"
-                variant="outlined"
-                {...register("email")}
-                error={!!errors.email}
-                helperText={errors.email?.message}
-                fullWidth
-                sx={{
-                  "& .MuiInputBase-root": { color: "white" },
-                }}
-                InputLabelProps={{
-                  style: { color: "white" },
-                }}
+                name="email"
+                register={register("email")} 
+                error={!!errors.email} 
+                helperText={errors.email?.message} 
               />
-              <TextField
-                label="Password"
+              <CustomTextField
                 type="password"
-                variant="outlined"
-                {...register("password")}
-                error={!!errors.password}
-                helperText={errors.password?.message}
-                fullWidth
-                sx={{
-                  "& .MuiInputBase-root": { color: "white" },
-                }}
-                InputLabelProps={{
-                  style: { color: "white" },
-                }}
+                label="Password"
+                name="password"
+                register={register("password")} 
+                error={!!errors.password} 
+                helperText={errors.password?.message} 
               />
-              <p>
-                Do not have an account?{" "}
-                <a className="text-blue-500" href="/register">
-                  Click here
-                </a>{" "}
-                to sign up.
-              </p>
+              
               <p className="p-2 text-red-500">{errorMessage}</p>
               <Button
                 type="submit"
@@ -113,6 +96,14 @@ export default function LoginPage() {
               >
                 Login
               </Button>
+
+              <p className="text-center">
+                Do not have an account?{" "}
+                <a className="text-blue-500" href="/register">
+                  Click here
+                </a>{" "}
+                to sign up.
+              </p>
             </Stack>
           </form>
         </Box>

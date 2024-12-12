@@ -12,7 +12,7 @@ const ModalSectionTable = dynamic(() => import('./ModalSectionTable'), { ssr: fa
 
 import { GraphType, PrerequisitesType } from "@/utils/Types/types";
 import { useNumberOfProblemsTableContext } from '@/contexts/NumberOfProblemsTableContext';
-import { getDataFromDB } from '@/firebase/database/functions';
+//import { getDataFromDB } from '@/firebase/database/functions';
 import { useAuthContext } from '@/contexts/AuthContext/AuthContext';
 import { useUserInfoContext } from '@/contexts/UserInfoContext';
 import { validateUserDataFromDBType } from '@/utils/functions/validateUserDataFromLocalStorage'
@@ -51,27 +51,39 @@ export default function ModalSection() {
     }, [isPrincipalModalSectionOpen.id, numberOfProblemsModalTable.quantityTableData, numberOfProblemsModalTable.totalStatusChecked]);
 
     useEffect(() => {
-        const fetchData = async () => { 
-            const resolvedProblems = await getDataFromDB('users/' + userAuth?.uid + '/problems-id:' + isPrincipalModalSectionOpen.id); 
-            if(resolvedProblems) {
-                setUserDataFromDatabase(resolvedProblems)
+        /* const fetchData = async () => { 
+            const resolvedProblems = await getDataFromDB('users/' + userAuth?.uid); 
+            let userDataProblems = null;
+            console.log("isPrincipalModalSectionOpen.id", isPrincipalModalSectionOpen.id);
+            for(const problem in resolvedProblems) {
+                const idString = `problems-id:${isPrincipalModalSectionOpen.id}`; 
+                //console.log("idString", idString);
+                //console.log("-----Problem----", );
+                console.log("-----Problem----", problem)
+                if(problem === idString) {
+                    userDataProblems = problem
+                }
+            }
+            console.log("userDataProblems", userDataProblems);
+            //const userDataProblems = resolvedProblems[`problems-id:${isPrincipalModalSectionOpen.id}`] || [];
+            //console.log("userDataProblems", resolvedProblems)
+            //console.log("userDataProblems", userDataProblems)
+            if(userDataProblems) {
+                //setUserDataFromDatabase(userDataProblems)
             }
         }; 
 
         if(userAuth?.uid) {
             fetchData();
-            console.log("Buscouuuuuuuuuuu no DB")
         }
-        else {
-            const userData = JSON.parse(localStorage.getItem('user-data') ?? '{}'); 
-            const userDataProblems = userData[`problems-id:${isPrincipalModalSectionOpen.id}`] || [];
+        else {} */
 
-            console.log("Buscouuuu no LOCAL-Storage")
-            const localStorageData = validateUserDataFromDBType(userDataProblems) ? userDataProblems : [];
-            setUserDataFromDatabase(localStorageData);
-            console.log("userDataProblems", userDataProblems)
-            console.log("LocalStorageData", localStorageData)
-        }
+        const userData = JSON.parse(localStorage.getItem('user-data') ?? '{}'); 
+        const userDataProblems = userData[`problems-id:${isPrincipalModalSectionOpen.id}`] || [];
+
+        const localStorageData = validateUserDataFromDBType(userDataProblems) ? userDataProblems : [];
+        setUserDataFromDatabase(localStorageData);
+        
 
     }, [isPrincipalModalSectionOpen.id, userAuth?.uid]);
 

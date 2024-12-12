@@ -28,7 +28,7 @@ export default function AsideSection() {
         <div className="w-full flex flex-col items-center gap-8 px-2">
           <p>Select Roadmap</p>
           <div className="w-full flex justify-center items-center">
-            <button className="px-6 py-[6px] rounded-2xl hover:bg-background bg-customPurpleBtn transition ease-in-out duration-300">
+            <button className="px-6 py-[6px] rounded-2xl bg-background transition ease-in-out duration-300">
               Algorithms
             </button>
             {/* <button className="px-6 py-[6px] rounded-2xl hover:bg-background active:bg-customPurpleBtn transition ease-in-out duration-300">
