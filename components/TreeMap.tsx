@@ -19,9 +19,7 @@ import { useIsModalOpenContext } from "@/contexts/IsModalOpenContext";
 import ProgressBar from './ProgressBar';
 import { useUserInfoContext } from '@/contexts/UserInfoContext';
 import { ProgressBarInfoType, UserDataFromDBArrayType } from '@/utils/Types/types';
-import { getDataFromDB } from '@/firebase/database/functions';
 import { useAuthContext } from '@/contexts/AuthContext/AuthContext';
-//import { validateUserDataFromStorageType } from '@/utils/functions/validateUserDataFromLocalStorage';
 
 
 const dagreGraph = new dagre.graphlib.Graph();
@@ -73,7 +71,7 @@ export default function Graph() {
 
 
   useEffect(() => {
-      if(userAuth?.uid) {
+      /* if(userAuth?.uid) {
           const fetchData = async () => { 
             const resolvedProblems = await getDataFromDB('users/' + userAuth?.uid); 
             // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -104,34 +102,32 @@ export default function Graph() {
           console.log("Buscouuuuuuuuuuu no DB")
       }
       else {
-          const storageData = JSON.parse(localStorage.getItem('user-data') ?? '{}'); 
-          
-          console.log("Buscouuuu no LOCAL-Storage")
-          //console.log("Storage", storageData)
-          const data: UserDataFromDBArrayType = [];
-          for(const problemInfo in storageData) {
+      } */
+      const storageData = JSON.parse(localStorage.getItem('user-data') ?? '{}'); 
+      
+      
+      const data: UserDataFromDBArrayType = [];
+      for(const problemInfo in storageData) {
 
-            const id = (storageData[problemInfo][0].nodeId);
-            data.push(
-              { 
-                nodeId: Number(id) || 0,
-                progressBarValue: Number(storageData[problemInfo][0].progressBarValue) || 0,
-                totalStatusChecked: Number(storageData[problemInfo][0].totalStatusChecked) || 0,
-                problemId: 0, //mock value
-                isStarChecked: false, //mock value
-                isStatusChecked: false, //mock value
-              }
-            )
+        const id = (storageData[problemInfo][0]?.nodeId);
+        data.push(
+          { 
+            nodeId: Number(id) || 0,
+            progressBarValue: Number(storageData[problemInfo][0]?.progressBarValue) || 0,
+            totalStatusChecked: Number(storageData[problemInfo][0]?.totalStatusChecked) || 0,
+            problemId: 0, //mock value
+            isStarChecked: false, //mock value
+            isStatusChecked: false, //mock value
           }
-          setUserGraphDataFromDatabase(data)
+        )
       }
+      setUserGraphDataFromDatabase(data)
 
-  }, [isPrincipalModalSectionOpen.id, userAuth?.uid]);
+  }, [isPrincipalModalSectionOpen.id, userAuth?.uid, isPrincipalModalSectionOpen.value]);
 
   useEffect(() => {
     if(!initialNodes || !userGraphDataFromDatabase) return;
     
-    console.log("userGraphDataFromDatabase", userGraphDataFromDatabase)
     setProgressBarInfo([]);
     const newProgressBarInfo = initialNodes.map((node) => { 
       let progressValue: number = 0;
@@ -164,8 +160,6 @@ export default function Graph() {
         return acc + item.totalStatusChecked;
       }, 0)
       setUserTotalProblemsStatusChecked(totalChecked)
-      console.log("progressBarInfo", progressBarInfo)
-      console.log("totalChecked", totalChecked)
     }
   }, [progressBarInfo])
 
@@ -191,12 +185,11 @@ export default function Graph() {
       const hasOutgoing = edges.some(edge => edge.source === id);
 
       const progressValue = progressBarInfo.find((item: ProgressBarInfoType) => item.nodeId === Number(id)) ?.progressBarValue || 0;  
-      /* console.log("progressValue", progressValue === 100) */
 
       return (
         <div
           key={id}
-          className={`p-4 text-white rounded-lg flex flex-col text-center text-sm h-[62px] min-w-[200px] justify-center cursor-pointer transition ease-in-out duration-300 hover:bg-customPurpleBtn  progressValue ${progressValue === 100 ? 'bg-[#4a186b]' : 'bg-purpleLogo'}`}
+          className={`p-4 text-white rounded-lg flex flex-col text-center text-sm h-[62px] min-w-[200px] justify-center cursor-pointer transition ease-in-out duration-300   progressValue ${progressValue === 100 ? 'bg-[#4a186b] hover:bg-[#4a186bd3]' : 'bg-purpleLogo hover:bg-customPurpleBtn'}`}
           onClick={() => handleNodeClick(id)}
         >
           { hasIncoming && (

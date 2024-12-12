@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import {
 Table,
 TableBody,
@@ -19,7 +19,7 @@ import { GraphType, ProblemType, TableDataType, UserDataFromDBType } from "@/uti
 import problemsData from '@/utils/data/problems-info-table.json';
 import { useNumberOfProblemsTableContext } from "@/contexts/NumberOfProblemsTableContext";
 import { useIsModalOpenContext } from "@/contexts/IsModalOpenContext";
-import { addUserResolvedProblemsToDB } from "@/firebase/database/functions";
+//import { addUserResolvedProblemsToDB } from "@/firebase/database/functions";
 import { useAuthContext } from "@/contexts/AuthContext/AuthContext";
 import { useUserInfoContext } from '@/contexts/UserInfoContext';
 
@@ -32,11 +32,11 @@ const ScrollableTable = () => {
     const { userAuth } = useAuthContext();
     const { userDataFromDatabase } = useUserInfoContext();
     const [tableData, setTableData] = useState<TableDataType[]>([]);
-    const initialTableDataRef = useRef<TableDataType[]>([]);
 
     
     useEffect(() => {
         const populateTable = () => {
+            setTableData([]);;
 
             let roadmapTitleInfo = null;
             for(const title in typedProblemsData){
@@ -63,7 +63,7 @@ const ScrollableTable = () => {
             }) || [];
 
             setTableData(newTableData);
-            console.log('userDataFromDatabase', userDataFromDatabase); 
+         
         }
         
         if (isPrincipalModalSectionOpen.value) {
@@ -74,7 +74,6 @@ const ScrollableTable = () => {
 
 
     useEffect(() => {
-        console.log("Contando number of Problems")
         if(tableData){
             const quantityTableData = tableData.length;
             const totalStatusChecked = tableData.reduce((acc, item) => {
@@ -85,15 +84,14 @@ const ScrollableTable = () => {
             }, 0);
             setNumberOfProblemsModalTable({ quantityTableData, totalStatusChecked });
         }
-    }, [setNumberOfProblemsModalTable, tableData])
+    }, [setNumberOfProblemsModalTable, tableData, userAuth?.uid, isPrincipalModalSectionOpen.id])
 
     useEffect(() => {
-        if(numberOfProblemsModalTable.totalStatusChecked === 0) return;
-
         const saveDataToDB = () => {
             const data = {
                 problems: tableData.map((item: TableDataType) => {
                     const progressBarValue = (numberOfProblemsModalTable.totalStatusChecked / numberOfProblemsModalTable.quantityTableData) * 100;
+
                     return {
                         problemId: item.id,
                         nodeId: isPrincipalModalSectionOpen.id,
@@ -106,31 +104,28 @@ const ScrollableTable = () => {
             }
 
             const roadmapTitleId = isPrincipalModalSectionOpen.id
-            if(userAuth?.uid) {
+            /* if(userAuth?.uid) {
                 console.log("Salvando dados no DB")
                 addUserResolvedProblemsToDB('users/' + userAuth?.uid + '/problems-id:' + roadmapTitleId, data.problems);
             }
             else {
-                const saveDataToLocalStorage = () => {
-                    const storedData = JSON.parse(localStorage.getItem('user-data') || '{}'); 
-                    const updatedData = {
-                        ...storedData, 
-                        [`problems-id:${roadmapTitleId}`]: data.problems 
-                    };
-                
-                    localStorage.setItem('user-data', JSON.stringify(updatedData)); 
+            } */
+            //console.log("Data Problems", data.problems)
+            const saveDataToLocalStorage = () => {
+                const storedData = JSON.parse(localStorage.getItem('user-data') || '{}'); 
+                const updatedData = {
+                    ...storedData, 
+                    [`problems-id:${roadmapTitleId}`]: data.problems 
                 };
-                saveDataToLocalStorage();
-            }
+            
+                localStorage.setItem('user-data', JSON.stringify(updatedData)); 
+            };
+            saveDataToLocalStorage();
         }
 
-        const hasChanges = JSON.stringify(initialTableDataRef.current) !== JSON.stringify(tableData);
-        if(hasChanges) {
-            saveDataToDB();
-            initialTableDataRef.current = tableData;
-        }
+        saveDataToDB();
 
-    }, [tableData, userAuth?.uid, isPrincipalModalSectionOpen.id, numberOfProblemsModalTable.totalStatusChecked]);
+    }, [tableData, userAuth?.uid, isPrincipalModalSectionOpen.id, numberOfProblemsModalTable.totalStatusChecked, numberOfProblemsModalTable.quantityTableData]);
 
 
 
