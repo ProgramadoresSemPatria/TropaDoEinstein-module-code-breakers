@@ -17,6 +17,8 @@ It uses React Flow for creating and managing interactive graphs and uses Firebas
 - [React Flow](https://reactflow.dev)
 - [Firebase](https://firebase.google.com)
 - [Tailwind CSS](https://tailwindcss.com)
+- [Zod](https://zod.dev/)
+- [React Hook Form](https://www.react-hook-form.com/)
 
 ## Getting Started
 
@@ -51,6 +53,8 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 - [Treemap](#Treemap)
 - [Aside Section](#aside-section)
 - [Modal Section](#modal-section)
+- [Login Page](#login-page)
+- [Register Page](#register-page)
 
 ## Treemap
 
@@ -357,6 +361,37 @@ The ModalSectionTable component displays a dynamic table of problem-solving task
 - Data Population: Fills the table when the modal is open.
 - Progress Tracking: Updates progress bar data whenever tableData changes.
 - Data Saving: Saves user progress either to Firebase or local storage.
+
+# Login Page
+
+This is a LoginPage component built with React and Next.js. The component utilizes the react-hook-form library for form handling and validation, zod for schema validation, and Firebase for user authentication.
+
+## Features
+
+- Form Validation: Uses zod to define a schema for email and password fields.
+- Custom Text Fields: Integrates CustomTextField for reusable, styled input fields.
+- Error Handling: Displays appropriate error messages for various Firebase authentication errors.
+- Navigation: Redirects the user to the home page ("/") upon successful login.
+
+## Key Components
+
+### Login Form
+
+**Input Fields:**
+
+- CustomTextField is used for the email and password fields.
+- Errors are displayed using the helperText prop of CustomTextField.
+- Error Message: A dynamic error message is displayed below the input fields using a useState variable errorMessage.
+
+**Submit Logic**
+
+- When the form is submitted, the onSubmit function is invoked.
+- The SignIn function authenticates the user using Firebase.
+- Error codes returned by Firebase are matched to provide user-friendly error messages.
+
+## Navigation
+
+- On successful login (validated by the presence of a user ID), the user is redirected to the home page using router.push("/").
 
 # Contexts
 
